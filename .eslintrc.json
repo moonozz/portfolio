@@ -7,6 +7,7 @@
     "plugin:react/recommended",
     "airbnb",
     "eslint:recommended",
+    "plugin:tailwindcss/recommended",
     "prettier",
     "plugin:prettier/recommended"
   ],
@@ -23,5 +24,12 @@
     "no-console": "warn",
     "no-nested-ternary": "off",
     "no-shadow": "off"
+  },
+  "settings": {
+    "tailwindcss": {
+      "config": "tailwind.config.js",
+      // className을 넘길 때 다른 propName도 className으로 처리하게 수정하는 옵션입니다
+      "callees": ["cls", "classnames"] // 필요에 따라 여러분이 수정해서 쓰시면 됩니다.
+    }
   }
 }
