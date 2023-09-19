@@ -22,4 +22,5 @@ const TagDiv = styled.div`
   /* border-radius: 100%; */
   border-radius: 1.2rem;
   margin-right: 0.8rem;
+  color: ${({ borderColor }) => borderColor};
 `;
