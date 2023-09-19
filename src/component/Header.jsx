@@ -25,12 +25,11 @@ const HeaderSec = styled.header`
   position: fixed;
   /* top: 0; */
   z-index: 30;
-  width: calc(100% - 6.4rem);
-  height: 7rem;
-  padding: 0 3.2rem;
+  width: calc(100% - 4rem);
+  height: 4.8rem;
+  padding: 0 2rem;
   display: flex;
   button {
-    /* position: ; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,9 +38,9 @@ const HeaderSec = styled.header`
     font-weight: 600;
     color: ${({ theme }) => theme.color.white};
   }
-  @media screen and (max-width: 768px) {
-    width: calc(100% - 4rem);
-    height: 4.8rem;
-    padding: 0 2rem;
+  @media screen and (min-width: 769px) {
+    width: calc(100% - 6.4rem);
+    height: 7rem;
+    padding: 0 3.2rem;
   }
 `;

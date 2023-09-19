@@ -25,6 +25,10 @@ const TagDiv = styled.div`
   margin-bottom: 0.8rem;
   color: ${({ borderColor }) => borderColor};
   p {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+
+    @media screen and (min-width: 769px) {
+      font-size: 1.4rem;
+    }
   }
 `;

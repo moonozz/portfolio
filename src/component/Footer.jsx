@@ -27,49 +27,49 @@ export default Footer;
 const FooterSec = styled.footer`
   dixplay: flex;
   background-color: ${({ theme }) => theme.color.black};
-  padding: 6.8rem 8rem 2.4rem;
-  @media screen and (max-width: 768px) {
-    padding: 4rem 2rem 2.4rem;
+  padding: 4rem 2rem 2.4rem;
+  @media screen and (min-width: 769px) {
+    padding: 6.8rem 8rem 2.4rem;
   }
 `;
 
 const Top = styled.div`
   display: flex;
-  justify-content: space-between;
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    justify-content: start;
+  flex-direction: column;
+  justify-content: start;
+  @media screen and (min-width: 769px) {
+    justify-content: space-between;
   }
 `;
 
 const Thx = styled.p`
   color: ${({ theme }) => theme.color.main};
-  font-size: 4rem;
+  font-size: 2.8rem;
   font-family: 'Clash Display';
-  @media screen and (max-width: 768px) {
-    font-size: 2.8rem;
+  @media screen and (min-width: 769px) {
+    font-size: 4rem;
   }
 `;
 
 const Info = styled.div`
   color: ${({ theme }) => theme.color.white};
-  font-size: 1.8rem;
-  text-align: right;
+  font-size: 1.4rem;
+  text-align: left;
+  margin-top: 2rem;
   p:first-child {
     margin-bottom: 2rem;
   }
-  @media screen and (max-width: 768px) {
-    font-size: 1.4rem;
-    text-align: left;
-    margin-top: 2rem;
+  @media screen and (min-width: 769px) {
+    font-size: 1.8rem;
+    text-align: right;
   }
 `;
 
 const Bottom = styled.div`
   color: ${({ theme }) => theme.color.white};
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-top: 10.6rem;
-  @media screen and (max-width: 768px) {
-    font-size: 1.2rem;
+  @media screen and (min-width: 769px) {
+    font-size: 1.4rem;
   }
 `;

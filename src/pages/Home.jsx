@@ -5,6 +5,8 @@ import data from '../data/data';
 import Tag from '../component/Tag';
 import Card from '../component/Card';
 
+import Image from '../images/perpett-main.png';
+
 function Home({ theme }) {
   const { Dev } = data;
   const { Design } = data;
@@ -96,7 +98,6 @@ function Home({ theme }) {
             </IntroTxt>
             <TagGroup>
               <Tag items={skillArr} borderColor={borderColor} />
-              {/* <Tag items={skillArr} borderColor={borderColor2} /> */}
             </TagGroup>
           </Intro>
           <DevSec>
@@ -112,6 +113,7 @@ function Home({ theme }) {
                 />
               );
             })}
+            <Text image={Image} />
           </DevSec>
           <DesignSec>
             <SubTitle>Design</SubTitle>
@@ -133,6 +135,12 @@ function Home({ theme }) {
 }
 
 export default withTheme(Home);
+
+const Text = styled.div`
+  background-image: url(${props => props.image});
+  width: 100px;
+  height: 100px;
+`;
 
 const Main = styled.section`
   display: flex;
@@ -173,7 +181,8 @@ const FlowTrack = styled.div`
 `;
 
 const FlowTitle = styled.div`
-  font-size: 15rem;
+  font-size: 10vh;
+
   color: ${({ theme }) => theme.color.main};
   animation: ${flowing} 10s linear infinite;
   line-height: 1.1;
@@ -182,8 +191,8 @@ const FlowTitle = styled.div`
     font-weight: 900;
     padding: 0 3rem;
   }
-  @media screen and (max-width: 768px) {
-    font-size: 15vh;
+  @media screen and (min-width: 769px) {
+    font-size: 15rem;
   }
 `;
 
@@ -211,42 +220,46 @@ const Arrow = styled.span`
   content: '';
   position: absolute;
   bottom: 5%;
-  width: 5rem;
+  width: 3rem;
   height: 0.1rem;
   background-color: ${({ theme }) => theme.color.white};
   transform: rotateZ(90deg);
   animation: ${arrowAni} 1s linear infinite;
+
   &::before {
     content: '';
     border-bottom: 0.1rem solid ${({ theme }) => theme.color.white};
     position: absolute;
-    width: 10%;
-    top: -0.15rem;
-    left: 4.6rem;
+    width: 20%;
+
+    top: -0.2rem;
+    left: 2.5rem;
     transform: rotateZ(45deg);
   }
   &::after {
     content: '';
     border-bottom: 0.1rem solid ${({ theme }) => theme.color.white};
     position: absolute;
-    width: 10%;
-    top: 0.15rem;
-    left: 4.6rem;
+    width: 20%;
+
+    top: 0.2rem;
+    left: 2.5rem;
     transform: rotateZ(-45deg);
   }
-  @media screen and (max-width: 768px) {
-    width: 3rem;
-    animation: ${arrowAni} 1s linear infinite;
+
+  @media screen and (min-width: 769px) {
+    width: 5rem;
+    /* animation: ${arrowAni} 1s linear infinite; */
 
     &::before {
-      width: 20%;
-      top: -0.2rem;
-      left: 2.5rem;
+      width: 10%;
+      top: -0.15rem;
+      left: 4.6rem;
     }
     &::after {
-      width: 20%;
-      top: 0.2rem;
-      left: 2.5rem;
+      width: 10%;
+      top: 0.15rem;
+      left: 4.6rem;
     }
   }
 `;
@@ -255,42 +268,61 @@ const Content = styled.section`
   background-color: ${({ theme }) => theme.color.main};
   display: flex;
   position: relative;
-  padding: 0 8rem;
+  flex-direction: column;
+  padding: 12rem 2.4rem;
+
+  @media screen and (min-width: 769px) {
+    padding: 0 8rem;
+    flex-direction: row;
+  }
 `;
 
 const Sticky = styled.div`
-  width: 50%;
-  /* height: calc(100vh - ); */
-  /* height: 100vh; */
-  z-index: 10;
+  width: 100%;
   div {
     display: flex;
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
     flex-direction: column;
     justify-content: center;
   }
   h3 {
     font-family: 'Clash Display';
-    font-size: 7vw;
     line-height: 1.1;
     font-weight: 800;
+    font-size: 10vw;
   }
   h3:first-child {
     margin-bottom: 2rem;
     font-weight: 400;
+  }
+
+  @media screen and (min-width: 769px) {
+    /* background-color: red; */
+    width: 50%;
+    z-index: 10;
+    div {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+    }
+    h3 {
+      font-size: 7vw;
+    }
   }
 `;
 
 const ScrollContent = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
-  padding: 15rem 0 15rem 4rem;
+  width: 100%;
   gap: 12rem;
+  margin-top: 10rem;
+
+  @media screen and (min-width: 769px) {
+    width: 50%;
+    padding: 15rem 0 15rem 4rem;
+  }
 `;
 
 const Intro = styled.div`
@@ -298,17 +330,25 @@ const Intro = styled.div`
   flex-direction: column;
 `;
 const IntroTxt = styled.div`
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   white-space: normal;
   text-overflow: ellipsis;
   p {
     margin-top: 0.8rem;
   }
+
+  @media screen and (min-width: 769px) {
+    font-size: 1.6rem;
+  }
 `;
 
 const SubTitle = styled.h4`
   font-family: 'Clash Display';
-  font-size: 4rem;
+  font-size: 2.8rem;
+
+  @media screen and (min-width: 769px) {
+    font-size: 4rem;
+  }
 `;
 
 const TagGroup = styled.div`

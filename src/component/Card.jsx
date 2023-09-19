@@ -7,7 +7,7 @@ function Card({ id, text, items, imgUrl, theme }) {
   return (
     <StyleLink to={`/p/${id}`}>
       <CardDiv>
-        <Img imgUrl={imgUrl} />
+        <Img image={imgUrl} />
         <Content>
           <Title>{text}</Title>
           <TagGroup>
@@ -39,14 +39,14 @@ const Img = styled.div`
   border-radius: 1.2rem;
   width: 100%;
   height: 12rem;
-  background-image: url(${({ imgUrl }) => imgUrl});
+  background-image: url(${props => props.image});
   background-repeat: no-repeat;
   background-size: cover;
   border: 0.1rem solid ${({ theme }) => theme.color.mainDark};
-  transition: all 0.5s;
+  /* transition: all 0.5s; */
+  transition: height cubic-bezier(0.4, 0, 1, 1) 300ms;
   &:hover {
     height: 30.8rem;
-    transition: height cubic-bezier(0.4, 0, 1, 1) 300ms;
   }
   &::after {
     position: absolute;
@@ -76,8 +76,9 @@ const TagGroup = styled.div`
 const Title = styled.h4`
   color: ${({ theme }) => theme.color.mainDark};
   font-family: 'Clash Display';
-  font-size: 2.4rem;
-  &:hover {
-    /* font-weight: 900; */
+  font-size: 1.8rem;
+
+  @media screen and (min-width: 769px) {
+    font-size: 2.4rem;
   }
 `;
