@@ -1,7 +1,4 @@
 const display = {
-  // mobile: 'screen and (max-width: '600px')',
-  // tablet: 'screen and (max-width: '768px')',
-  // desktop: 'screen and (max-width: '1024px')',
   mobile: '560px',
   tablet: '768px',
   desktop: '1024px',
