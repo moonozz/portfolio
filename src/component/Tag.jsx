@@ -1,13 +1,25 @@
 import React from 'react';
+import styled from 'styled-components';
 
-function Tag({ items }) {
+function Tag({ items, borderColor }) {
   return (
-    <div className="tag-box">
+    <>
       {items.map(item => (
-        <p>{item}</p>
+        <TagDiv borderColor={borderColor}>
+          <p>{item}</p>
+        </TagDiv>
       ))}
-    </div>
+    </>
   );
 }
 
 export default Tag;
+
+const TagDiv = styled.div`
+  padding: 0.2rem 0.8rem;
+  border: 0.1rem solid;
+  border-color: ${({ borderColor }) => borderColor};
+  /* border-radius: 100%; */
+  border-radius: 1.2rem;
+  margin-right: 0.8rem;
+`;
