@@ -7,8 +7,6 @@ function Card({ id, text, items, imgUrl, theme }) {
   return (
     <StyleLink to={`/p/${id}`}>
       <CardDiv>
-        {/* <LinkDiv> */}
-        {/* <Img src={imgUrl} alt="퍼펫트" /> */}
         <Img imgUrl={imgUrl} />
         <Content>
           <Title>{text}</Title>
@@ -16,7 +14,6 @@ function Card({ id, text, items, imgUrl, theme }) {
             <Tag items={items} borderColor={theme.color.mainDark} />
           </TagGroup>
         </Content>
-        {/* </LinkDiv> */}
       </CardDiv>
     </StyleLink>
   );
@@ -37,18 +34,6 @@ const CardDiv = styled.div`
   margin-bottom: 2.4rem;
 `;
 
-const LinkDiv = styled.a`
-  /* display: flex;
-  flex-direction: column; */
-  &:hover {
-    text-decoration: none;
-    font-weight: 900;
-    /* transition: width 2s linear 4s; */
-    /* transition: all 3s ease-in-out 8s; */
-    /* transition: all cubic-bezier(0.4, 0, 1, 1) 300ms; */
-  }
-`;
-
 const Img = styled.div`
   position: relative;
   border-radius: 1.2rem;
@@ -58,12 +43,10 @@ const Img = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   border: 0.1rem solid ${({ theme }) => theme.color.mainDark};
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  transition: height cubic-bezier(0.4, 0, 1, 1) 300ms;
   &:hover {
-    transition: all cubic-bezier(0.4, 0, 1, 1) 300ms;
     height: 30.8rem;
+    transition: height cubic-bezier(0.4, 0, 1, 1) 300ms;
   }
   &::after {
     position: absolute;
@@ -83,6 +66,7 @@ const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 0.8rem;
 `;
 
 const TagGroup = styled.div`
