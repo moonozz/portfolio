@@ -1,15 +1,20 @@
-import './App.css';
+// import './App.css';
+import styled from 'styled-components';
 import { Routes, Route } from 'react-router-dom';
-import Main from './pages/Main';
-import Dev1 from './pages/Dev1';
+import Home from './pages/Home';
+import DevPerpett from './pages/DevPerpett';
+import Header from './component/Header';
+import Footer from './component/Footer';
 
 function App() {
   return (
     <div>
+      <Header />
       <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/dev1" element={<Dev1 />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/dev-perpett" element={<DevPerpett />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
