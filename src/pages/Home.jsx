@@ -1,10 +1,15 @@
 import styled, { keyframes, withTheme } from 'styled-components';
 import { useEffect, useRef } from 'react';
+import data from '../data/data';
 
 import Tag from '../component/Tag';
 import Card from '../component/Card';
 
 function Home({ theme }) {
+  const { Dev } = data;
+  const { Design } = data;
+  console.log(typeof Dev[0].imgUrl);
+  console.log(Design[0].id);
   const borderColor = theme.color.black;
   // const borderColor2 = theme.color.white`;
 
@@ -94,15 +99,33 @@ function Home({ theme }) {
               {/* <Tag items={skillArr} borderColor={borderColor2} /> */}
             </TagGroup>
           </Intro>
-          <div className="Dev">
+          <DevSec>
             <SubTitle>Dev</SubTitle>
-            <Card text="Perpett" items={['App', 'App', 'App', 'App']} />
-            <Card text="Perpett" items={['App', 'App', 'App', 'App']} />
-            <Card text="Perpett" items={['App', 'App', 'App', 'App']} />
-            <Card text="Perpett" items={['App', 'App', 'App', 'App']} />
-            <Card text="Perpett" items={['App', 'App', 'App', 'App']} />
-            <Card text="Perpett" items={['App', 'App', 'App', 'App']} />
-          </div>
+            {Dev.map(el => {
+              return (
+                <Card
+                  id={el.id}
+                  text={el.title}
+                  items={el.items}
+                  imgUrl={el.imgUrl}
+                  onClick={el.link}
+                />
+              );
+            })}
+          </DevSec>
+          <DesignSec>
+            <SubTitle>Design</SubTitle>
+            {Design.map(el => {
+              return (
+                <Card
+                  id={el.id}
+                  text={el.title}
+                  items={el.items}
+                  imgUrl={el.imgUrl}
+                />
+              );
+            })}
+          </DesignSec>
         </ScrollContent>
       </Content>
     </div>
@@ -289,3 +312,7 @@ const TagGroup = styled.div`
   display: flex;
   margin-top: 3.2rem;
 `;
+
+const DevSec = styled.div``;
+
+const DesignSec = styled.div``;

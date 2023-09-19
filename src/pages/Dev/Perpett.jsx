@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-function DevPerpett() {
+function Perpett() {
   return <div>DevPerpett</div>;
 }
 
-export default DevPerpett;
+export default Perpett;
