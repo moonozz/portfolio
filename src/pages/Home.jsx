@@ -8,8 +8,8 @@ import Card from '../component/Card';
 function Home({ theme }) {
   const { Dev } = data;
   const { Design } = data;
-  console.log(typeof Dev[0].imgUrl);
-  console.log(Design[0].id);
+  // console.log(typeof Dev[0].imgUrl);
+  // console.log(Design[0].id);
   const borderColor = theme.color.black;
   // const borderColor2 = theme.color.white`;
 
@@ -266,8 +266,10 @@ const Sticky = styled.div`
   div {
     display: flex;
     position: sticky;
+    top: 0;
+    left: 0;
     width: 100%;
-    /* height: 100%; */
+    height: 50%;
     flex-direction: column;
     justify-content: center;
   }
@@ -296,8 +298,9 @@ const Intro = styled.div`
   flex-direction: column;
 `;
 const IntroTxt = styled.div`
-  font-size: 1.3rem;
-  white-space: nowrap;
+  font-size: 1.6rem;
+  white-space: normal;
+  text-overflow: ellipsis;
   p {
     margin-top: 0.8rem;
   }
@@ -310,7 +313,11 @@ const SubTitle = styled.h4`
 
 const TagGroup = styled.div`
   display: flex;
+  flex-wrap: wrap;
   margin-top: 3.2rem;
+  div:first-child {
+    margin-left: 0;
+  }
 `;
 
 const DevSec = styled.div``;
