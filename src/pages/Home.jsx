@@ -1,11 +1,9 @@
 import styled, { keyframes, withTheme } from 'styled-components';
 import { useEffect, useRef } from 'react';
-import data from '../data/data';
+import data from '../data/data.json';
 
 import Tag from '../component/Tag';
 import Card from '../component/Card';
-
-import Image from '../images/perpett-main.png';
 
 function Home({ theme }) {
   const { Dev } = data;
@@ -113,7 +111,6 @@ function Home({ theme }) {
                 />
               );
             })}
-            <Text image={Image} />
           </DevSec>
           <DesignSec>
             <SubTitle>Design</SubTitle>
@@ -135,12 +132,6 @@ function Home({ theme }) {
 }
 
 export default withTheme(Home);
-
-const Text = styled.div`
-  background-image: url(${props => props.image});
-  width: 100px;
-  height: 100px;
-`;
 
 const Main = styled.section`
   display: flex;

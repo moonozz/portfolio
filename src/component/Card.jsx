@@ -4,6 +4,9 @@ import styled, { withTheme } from 'styled-components';
 import Tag from './Tag';
 
 function Card({ id, text, items, imgUrl, theme }) {
+  console.log(imgUrl);
+  // const imgUrl = `../images/${props.image}`
+
   return (
     <StyleLink to={`/p/${id}`}>
       <CardDiv>
@@ -39,7 +42,8 @@ const Img = styled.div`
   border-radius: 1.2rem;
   width: 100%;
   height: 12rem;
-  background-image: url(${props => props.image});
+  background-image: url(${process.env.PUBLIC_URL}/assets/${props =>
+    props.image});
   background-repeat: no-repeat;
   background-size: cover;
   border: 0.1rem solid ${({ theme }) => theme.color.mainDark};
