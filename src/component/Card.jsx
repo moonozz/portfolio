@@ -5,24 +5,31 @@ import Tag from './Tag';
 
 function Card({ id, text, items, imgUrl, theme }) {
   return (
-    <Link to={`/p/${id}`}>
+    <StyleLink to={`/p/${id}`}>
       <CardDiv>
-        <LinkDiv>
-          {/* <Img src={imgUrl} alt="퍼펫트" /> */}
-          <Img imgUrl={imgUrl} />
-          <Content>
-            <Title>{text}</Title>
-            <TagGroup>
-              <Tag items={items} borderColor={theme.color.mainDark} />
-            </TagGroup>
-          </Content>
-        </LinkDiv>
+        {/* <LinkDiv> */}
+        {/* <Img src={imgUrl} alt="퍼펫트" /> */}
+        <Img imgUrl={imgUrl} />
+        <Content>
+          <Title>{text}</Title>
+          <TagGroup>
+            <Tag items={items} borderColor={theme.color.mainDark} />
+          </TagGroup>
+        </Content>
+        {/* </LinkDiv> */}
       </CardDiv>
-    </Link>
+    </StyleLink>
   );
 }
 
 export default withTheme(Card);
+
+const StyleLink = styled(Link)`
+  &:hover {
+    text-decoration: none;
+    font-weight: 900;
+  }
+`;
 
 const CardDiv = styled.div`
   display: flex;
