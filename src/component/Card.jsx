@@ -43,7 +43,7 @@ const Img = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   border: 0.1rem solid ${({ theme }) => theme.color.mainDark};
-  transition: height cubic-bezier(0.4, 0, 1, 1) 300ms;
+  transition: all 0.5s;
   &:hover {
     height: 30.8rem;
     transition: height cubic-bezier(0.4, 0, 1, 1) 300ms;
