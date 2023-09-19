@@ -21,6 +21,10 @@ const TagDiv = styled.div`
   border-color: ${({ borderColor }) => borderColor};
   /* border-radius: 100%; */
   border-radius: 1.2rem;
-  margin-right: 0.8rem;
+  margin: 0 0.2rem;
+  margin-bottom: 0.8rem;
   color: ${({ borderColor }) => borderColor};
+  p {
+    font-size: 1.4rem;
+  }
 `;

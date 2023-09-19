@@ -24,7 +24,7 @@ const HeaderSec = styled.header`
   /* background-color: red; */
   position: fixed;
   /* top: 0; */
-  z-index: 10;
+  z-index: 30;
   width: calc(100% - 6.4rem);
   height: 7rem;
   padding: 0 3.2rem;
