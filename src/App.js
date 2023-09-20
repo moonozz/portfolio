@@ -1,6 +1,8 @@
 // import './App.css';
 import styled from 'styled-components';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import Home from './pages/Home';
 import Perpett from './pages/Dev/Perpett';
 import Poopoo from './pages/Dev/Poopoo';

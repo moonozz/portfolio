@@ -1,11 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled, { withTheme } from 'styled-components';
+import { useSelector, useDispatch } from 'react-redux';
+import { setBack } from '../actions/actions';
+
 import Tag from './Tag';
 
 function Card({ id, text, items, imgUrl, theme }) {
+  const dispatch = useDispatch();
+
+  const onPageClick = () => {
+    dispatch(setBack('other'));
+  };
+
   return (
-    <StyleLink to={`/p/${id}`}>
+    <StyleLink
+      to={`/p/${id}`}
+      onClick={() => {
+        onPageClick();
+      }}
+    >
       <CardDiv>
         <Img $image={imgUrl} />
         <Content>

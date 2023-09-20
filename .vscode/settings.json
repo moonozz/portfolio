@@ -1,0 +1,6 @@
+{
+  "eslint.codeActionsOnSave.rules": null,
+  "editor.tabSize": 2,
+  "typescript.validate.enable": false,
+  "javascript.validate.enable": false
+}

@@ -1,17 +1,27 @@
 import styled, { keyframes, withTheme } from 'styled-components';
-import { useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { setPosition } from '../actions/actions';
 import data from '../data/data.json';
 
 import Tag from '../component/Tag';
 import Card from '../component/Card';
 
 function Home({ theme }) {
+  const dispatch = useDispatch();
+  const position = useSelector(state => state.position);
+
   const { Dev } = data;
   const { Design } = data;
-  // console.log(typeof Dev[0].imgUrl);
-  // console.log(Design[0].id);
-  const borderColor = theme.color.black;
-  // const borderColor2 = theme.color.white`;
+
+  const onScroll = () => {
+    setPosition(window.scrollY);
+  };
+
+  useEffect(() => {
+    console.log(position);
+    window.addEventListener('scroll', onScroll);
+  }, [position]);
 
   const skillArr = [
     'html',
@@ -95,7 +105,11 @@ function Home({ theme }) {
               </p>
             </IntroTxt>
             <TagGroup>
-              <Tag items={skillArr} borderColor={borderColor} />
+              <Tag
+                key={skillArr.indexOf}
+                items={skillArr}
+                borderColor={theme.color.black}
+              />
             </TagGroup>
           </Intro>
           <DevSec>
@@ -103,11 +117,11 @@ function Home({ theme }) {
             {Dev.map(el => {
               return (
                 <Card
+                  key={el.id}
                   id={el.id}
                   text={el.title}
                   items={el.items}
                   imgUrl={el.imgUrl}
-                  onClick={el.link}
                 />
               );
             })}
@@ -117,6 +131,7 @@ function Home({ theme }) {
             {Design.map(el => {
               return (
                 <Card
+                  key={el.id}
                   id={el.id}
                   text={el.title}
                   items={el.items}

@@ -1,19 +1,36 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { setBack } from '../actions/actions';
 
 function Header() {
   const navi = useNavigate();
+  const dispatch = useDispatch();
+  const backPage = useSelector(state => state.back);
+
   const reload = () => {
     navi('/');
     window.location.reload();
+    dispatch(setBack('main'));
+  };
+
+  const onPageClick = () => {
+    dispatch(setBack('main'));
+    navi('/');
   };
 
   return (
     <HeaderSec>
-      <button type="button" aria-label="home" onClick={reload}>
-        Moono
-      </button>
+      {backPage === 'main' ? (
+        <button type="button" aria-label="home" onClick={reload}>
+          Moono
+        </button>
+      ) : (
+        <button type="button" aria-label="home" onClick={() => onPageClick()}>
+          Back to Main
+        </button>
+      )}
     </HeaderSec>
   );
 }
@@ -21,9 +38,7 @@ function Header() {
 export default Header;
 
 const HeaderSec = styled.header`
-  /* background-color: red; */
   position: fixed;
-  /* top: 0; */
   z-index: 30;
   width: calc(100% - 4rem);
   height: 4.8rem;
