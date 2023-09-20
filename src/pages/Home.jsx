@@ -6,6 +6,8 @@ import data from '../data/data.json';
 
 import Tag from '../component/Tag';
 import Card from '../component/Card';
+import { ReactComponent as BtnVelog } from '../images/velog.svg';
+import { ReactComponent as BtnGithub } from '../images/github.svg';
 
 function Home({ theme }) {
   const dispatch = useDispatch();
@@ -58,22 +60,32 @@ function Home({ theme }) {
       </Main>
       <Content>
         <Sticky>
-          <div>
+          <StickyTxt>
             <h3>
               Frontend
               <br />
               Developer
             </h3>
             <h3>moono</h3>
-            <div>
-              <button
-                type="button"
-                aria-label="github"
-                className="github-btn"
-              />
-              <button type="button" aria-label="figma" className="figma-btn" />
-            </div>
-          </div>
+            <BtnDiv className="snsBtnGroup">
+              <a
+                href="https://github.com/moonozz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="github"
+              >
+                <BtnGithub />
+              </a>
+              <a
+                href="https://github.com/moonozz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="velog"
+              >
+                <BtnVelog />
+              </a>
+            </BtnDiv>
+          </StickyTxt>
         </Sticky>
         <ScrollContent>
           <Intro>
@@ -285,16 +297,11 @@ const Content = styled.section`
 
 const Sticky = styled.div`
   width: 100%;
-  div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
   h3 {
     font-family: 'Clash Display';
     line-height: 1.1;
     font-weight: 800;
-    font-size: 10vw;
+    font-size: 12vw;
   }
   h3:first-child {
     margin-bottom: 2rem;
@@ -302,19 +309,31 @@ const Sticky = styled.div`
   }
 
   @media screen and (min-width: 769px) {
-    /* background-color: red; */
     width: 50%;
     z-index: 10;
-    div {
-      position: sticky;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 50%;
-    }
     h3 {
       font-size: 7vw;
     }
+  }
+`;
+
+const StickyTxt = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media screen and (min-width: 769px) {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35%;
+  }
+`;
+
+const BtnDiv = styled.div`
+  margin-top: 4rem;
+  @media screen and (min-width: 769px) {
+    margin-top: 8rem;
   }
 `;
 

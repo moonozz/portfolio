@@ -60,6 +60,21 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+
+  .snsBtnGroup {
+    display: flex;
+    flex-direction: row;
+    gap: 2.8rem;
+  }
+  .snsBtnGroup a {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 100%;
+  }
+  .snsBtnGroup a svg {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
 `;
 
 export default GlobalStyles;

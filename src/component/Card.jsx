@@ -57,13 +57,11 @@ const Img = styled.div`
   border-radius: 1.2rem;
   width: 100%;
   height: 12rem;
-  background-image: url(${process.env.PUBLIC_URL}/assets/${props =>
-    props.$image});
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: center / cover no-repeat
+    url(${process.env.PUBLIC_URL}/assets/${props => props.$image});
   border: 0.1rem solid ${({ theme }) => theme.color.mainDark};
-  /* transition: all 0.5s; */
-  transition: height cubic-bezier(0.4, 0, 1, 1) 300ms;
+  transition: all 0.5s;
+  /* transition: height cubic-bezier(0.4, 0, 1, 1) 300ms; */
   &:hover {
     height: 30.8rem;
   }
