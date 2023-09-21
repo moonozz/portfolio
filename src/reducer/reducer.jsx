@@ -14,6 +14,14 @@ const initialState = {
     imgUrl: '',
     items: [],
     title: '',
+    link: '',
+    github: '',
+    figma: '',
+    notion: '',
+    date: '',
+    info: '',
+    infoDetail: [],
+    skill: [],
   },
 };
 
@@ -39,7 +47,7 @@ const persistConfig = {
   key: 'root',
   // localStorage에 저장합니다.
   storage, // 사용할 스토리지 정의
-  // auth, board, studio 3개의 reducer 중에 auth reducer만 localstorage에 저장합니다.
+  // 3개의 reducer 전부 local에 저장하겠다.
   whitelist: ['back', 'position', 'project'],
   // blacklist -> 그것만 제외합니다
 };
