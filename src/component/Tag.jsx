@@ -29,7 +29,7 @@ const TagDiv = styled.div`
   p {
     font-size: 1.3rem;
 
-    @media screen and (min-width: 769px) {
+    @media ${({ theme }) => theme.tablet} {
       font-size: 1.4rem;
     }
   }

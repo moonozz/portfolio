@@ -1,13 +1,7 @@
 const display = {
-  mobile: '560px',
-  tablet: '768px',
-  desktop: '1024px',
-};
-
-const screenSize = {
-  mobile: `screen and (max-width: ${display.mobile})`,
-  tablet: `screen and (max-width: ${display.tablet})`,
-  desktop: `screen and (max-width: ${display.desktop})`,
+  mobile: '561px',
+  tablet: '769px',
+  desktop: '1025px',
 };
 
 const color = {
@@ -32,7 +26,9 @@ const theme = {
   color,
   fontSize,
   display,
-  screenSize,
+  mobile: `(min-width: ${display.mobile})`,
+  tablet: `(min-width: ${display.tablet})`,
+  desktop: `(min-width: ${display.desktop})`,
 };
 
 export default theme;

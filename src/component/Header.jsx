@@ -2,12 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { setBack } from '../actions/actions';
+import { setBack, setProject } from '../actions/actions';
 
 function Header() {
   const navi = useNavigate();
   const dispatch = useDispatch();
   const backPage = useSelector(state => state.back);
+  const project = useSelector(state => state.project);
 
   const reload = () => {
     navi('/');
@@ -18,6 +19,15 @@ function Header() {
   const onPageClick = () => {
     dispatch(setBack('main'));
     navi('/');
+    // dispatch(
+    //   setProject({
+    //     id: '',
+    //     imgUrl: '',
+    //     items: [],
+    //     title: '',
+    //   }),
+    // );
+    // console.log(project);
   };
 
   return (
@@ -51,9 +61,11 @@ const HeaderSec = styled.header`
     font-family: 'Clash Display';
     font-size: 2.4rem;
     font-weight: 600;
-    color: ${({ theme }) => theme.color.white};
+    /* color: ${({ theme }) => theme.color.white}; */
+    color: ${({ theme, backPage }) =>
+      backPage === 'main' ? theme.color.white : theme.color.black};
   }
-  @media screen and (min-width: 769px) {
+  @media ${({ theme }) => theme.tablet} {
     width: calc(100% - 6.4rem);
     height: 7rem;
     padding: 0 3.2rem;

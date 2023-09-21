@@ -209,7 +209,7 @@ const FlowTitle = styled.div`
     font-weight: 900;
     padding: 0 3rem;
   }
-  @media screen and (min-width: 769px) {
+  @media ${({ theme }) => theme.tablet} {
     font-size: 15rem;
   }
 `;
@@ -265,7 +265,7 @@ const Arrow = styled.span`
     transform: rotateZ(-45deg);
   }
 
-  @media screen and (min-width: 769px) {
+  @media ${({ theme }) => theme.tablet} {
     width: 5rem;
     /* animation: ${arrowAni} 1s linear infinite; */
 
@@ -289,7 +289,7 @@ const Content = styled.section`
   flex-direction: column;
   padding: 12rem 2.4rem;
 
-  @media screen and (min-width: 769px) {
+  @media ${({ theme }) => theme.tablet} {
     padding: 0 8rem;
     flex-direction: row;
   }
@@ -308,7 +308,7 @@ const Sticky = styled.div`
     font-weight: 400;
   }
 
-  @media screen and (min-width: 769px) {
+  @media ${({ theme }) => theme.tablet} {
     width: 50%;
     z-index: 10;
     h3 {
@@ -321,7 +321,7 @@ const StickyTxt = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  @media screen and (min-width: 769px) {
+  @media ${({ theme }) => theme.tablet} {
     position: sticky;
     top: 0;
     left: 0;
@@ -332,7 +332,7 @@ const StickyTxt = styled.div`
 
 const BtnDiv = styled.div`
   margin-top: 4rem;
-  @media screen and (min-width: 769px) {
+  @media ${({ theme }) => theme.tablet} {
     margin-top: 8rem;
   }
 `;
@@ -344,7 +344,7 @@ const ScrollContent = styled.div`
   gap: 12rem;
   margin-top: 10rem;
 
-  @media screen and (min-width: 769px) {
+  @media ${({ theme }) => theme.tablet} {
     width: 50%;
     padding: 15rem 0 15rem 4rem;
   }
@@ -362,7 +362,7 @@ const IntroTxt = styled.div`
     margin-top: 0.8rem;
   }
 
-  @media screen and (min-width: 769px) {
+  @media ${({ theme }) => theme.tablet} {
     font-size: 1.6rem;
   }
 `;
@@ -371,7 +371,7 @@ const SubTitle = styled.h4`
   font-family: 'Clash Display';
   font-size: 2.8rem;
 
-  @media screen and (min-width: 769px) {
+  @media ${({ theme }) => theme.tablet} {
     font-size: 4rem;
   }
 `;
