@@ -7,18 +7,22 @@ import { setBack, setProject } from '../actions/actions';
 function Header() {
   const navi = useNavigate();
   const dispatch = useDispatch();
-  const backPage = useSelector(state => state.back);
+  const back = useSelector(state => state.back);
   const project = useSelector(state => state.project);
+
+  const localGet = localStorage.getItem('back');
 
   const reload = () => {
     navi('/');
     window.location.reload();
     dispatch(setBack('main'));
+    localStorage.setItem('back', localGet);
   };
 
-  const onPageClick = () => {
-    dispatch(setBack('main'));
+  const onMainClick = () => {
     navi('/');
+    dispatch(setBack('main'));
+    localStorage.setItem('back', localGet);
     // dispatch(
     //   setProject({
     //     id: '',
@@ -32,12 +36,12 @@ function Header() {
 
   return (
     <HeaderSec>
-      {backPage === 'main' ? (
+      {back === 'main' ? (
         <button type="button" aria-label="home" onClick={reload}>
           Moono
         </button>
       ) : (
-        <button type="button" aria-label="home" onClick={() => onPageClick()}>
+        <button type="button" aria-label="home" onClick={() => onMainClick()}>
           Back to Main
         </button>
       )}
