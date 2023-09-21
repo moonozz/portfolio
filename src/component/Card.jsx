@@ -2,15 +2,46 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled, { withTheme } from 'styled-components';
 import { useSelector, useDispatch } from 'react-redux';
-import { setBack } from '../actions/actions';
+import { setBack, setProject } from '../actions/actions';
+import data from '../data/data.json';
 
 import Tag from './Tag';
 
 function Card({ id, text, items, imgUrl, theme }) {
   const dispatch = useDispatch();
+  const project = useSelector(state => state.project);
 
   const onPageClick = () => {
     dispatch(setBack('other'));
+    saveProject();
+    // const imgUrl = { imgUrl };
+  };
+
+  const saveProject = () => {
+    const findId = id;
+    const devObject = data.Dev.find(item => item.id === findId);
+    const designObject = data.Design.find(item => item.id === findId);
+
+    if (devObject) {
+      // console.log('Dev 카테고리에서 찾은 객체:', devObject);
+      // console.log(devObject.id);
+      // console.log(devObject.items);
+      dispatch(
+        setProject({
+          id: Number(devObject.id),
+          imgUrl: devObject.imgUrl,
+          items: devObject.items,
+          title: devObject.title,
+        }),
+      );
+      console.log(project, 'project객체 저장완료');
+    }
+
+    if (designObject) {
+      console.log('Design 카테고리에서 찾은 객체:', designObject);
+      setProject(designObject);
+      console.log(project, 'project객체 저장완료');
+    }
   };
 
   return (
@@ -19,6 +50,7 @@ function Card({ id, text, items, imgUrl, theme }) {
       onClick={() => {
         onPageClick();
       }}
+      id={id}
     >
       <CardDiv>
         <Img $image={imgUrl} />
@@ -95,7 +127,7 @@ const Title = styled.h4`
   font-family: 'Clash Display';
   font-size: 1.8rem;
 
-  @media screen and (min-width: 769px) {
+  @media ${({ theme }) => theme.tablet} {
     font-size: 2.4rem;
   }
 `;

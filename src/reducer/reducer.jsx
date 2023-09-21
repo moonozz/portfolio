@@ -3,12 +3,18 @@ import { createReducer, combineReducers } from '@reduxjs/toolkit';
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-import { setBack, setPosition } from '../actions/actions';
+import { setBack, setPosition, setProject } from '../actions/actions';
 
 // 상태 정의
 const initialState = {
   back: 'main',
   position: 0,
+  project: {
+    id: '',
+    imgUrl: '',
+    items: [],
+    title: '',
+  },
 };
 
 const backReducer = createReducer(initialState.back, builder => {
@@ -19,9 +25,14 @@ const positionReducer = createReducer(initialState.position, builder => {
   builder.addCase(setPosition, (state, action) => action.payload);
 });
 
+const projectReducer = createReducer(initialState.project, builder => {
+  builder.addCase(setProject, (state, action) => action.payload);
+});
+
 const rootReducer = combineReducers({
   back: backReducer,
   position: positionReducer,
+  project: projectReducer,
 });
 
 const persistConfig = {
@@ -29,7 +40,7 @@ const persistConfig = {
   // localStorage에 저장합니다.
   storage, // 사용할 스토리지 정의
   // auth, board, studio 3개의 reducer 중에 auth reducer만 localstorage에 저장합니다.
-  whitelist: ['back', 'position'],
+  whitelist: ['back', 'position', 'project'],
   // blacklist -> 그것만 제외합니다
 };
 
