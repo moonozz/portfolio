@@ -6,6 +6,7 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     font-size: 62.5%;
+    over-flow-x :  hidden;
   }
   body, input {
     font-family: 'Pretendard', sans-serif;
