@@ -1,7 +1,7 @@
 import styled, { keyframes, withTheme } from 'styled-components';
 import { useState, useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { setPosition } from '../actions/actions';
+import { setPosition, setBack } from '../actions/actions';
 import data from '../data/data.json';
 
 import Tag from '../component/Tag';
@@ -12,6 +12,7 @@ import { ReactComponent as BtnGithub } from '../images/github.svg';
 function Home({ theme }) {
   const dispatch = useDispatch();
   const position = useSelector(state => state.position);
+  const back = useSelector(state => state.back);
 
   const { Dev } = data;
   const { Design } = data;
@@ -21,9 +22,12 @@ function Home({ theme }) {
   };
 
   useEffect(() => {
+    dispatch(setBack('main'));
+    localStorage.setItem('back', 'main');
+
     console.log(position);
     window.addEventListener('scroll', onScroll);
-  }, [position]);
+  }, []);
 
   const skillArr = [
     'html',
@@ -116,7 +120,7 @@ function Home({ theme }) {
                 마무리 하고자 합니다.
               </p>
             </IntroTxt>
-            <TagGroup>
+            <TagGroup className="tag-group">
               <Tag
                 key={skillArr.indexOf}
                 items={skillArr}
@@ -302,6 +306,7 @@ const Sticky = styled.div`
     line-height: 1.1;
     font-weight: 800;
     font-size: 12vw;
+    color: ${({ theme }) => theme.color.black};
   }
   h3:first-child {
     margin-bottom: 2rem;
@@ -376,14 +381,7 @@ const SubTitle = styled.h4`
   }
 `;
 
-const TagGroup = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 3.2rem;
-  div:first-child {
-    margin-left: 0;
-  }
-`;
+const TagGroup = styled.div``;
 
 const DevSec = styled.div``;
 
