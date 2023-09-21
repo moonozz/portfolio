@@ -7,8 +7,9 @@ const display = {
 const color = {
   white: '#fff',
   black: '#000',
-  lightGray: '#F5F5F5',
-  main: '#F6ECC9',
+  lightGrayYello: '#FCF6EF',
+  main: '#E2DCC1',
+  mainLight: '#F0EEE3',
   mainDark: '#574910',
   mainDim: '#A08E45',
 };
