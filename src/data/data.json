@@ -4,7 +4,30 @@
       "id": 1,
       "title": "Perpett",
       "items": ["Team Project"],
-      "imgUrl": "perpett-main.png"
+      "imgUrl": "perpett-main.png",
+      "link": "http://testqjzlt.s3-website.ap-northeast-2.amazonaws.com/",
+      "github": "https://github.com/codestates-seb/seb43_main_030",
+      "figma": "https://www.figma.com/file/PFOgIanoWAdQqqgtEtRWUM/%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC-%EC%9C%A0%EC%B9%98%EC%9B%90-%EA%B8%B0%ED%9A%8D-%EB%B0%8F-%EB%94%94%EC%9E%90%EC%9D%B8?type=design&node-id=726-7469&mode=design&t=lPhmq71RjNvxv4Lm-0",
+      "notion": "https://www.notion.so/Perpett-cdea2b3b1bb14a6f92dfff322522ba51?pvs=4",
+      "date": "2023.05",
+      "info": "서울에 반려견 유치원 정보를 모아 보여주고, 각 유치원 커뮤니티를 이용할 수 있는 플랫폼",
+      "infoDetail": [
+        "∙ Front-end, 화면 설계, UI/UX",
+        "∙ 로그인, 회원가입, 인증메일 전송, Oauth(Google, Kakao)",
+        "∙ 유치원 상세페이지",
+        "∙ 마이페이지(프로필 CRUD, 프로필 변경추가삭제)"
+      ],
+      "skill": [
+        "html",
+        "css",
+        "Javascript",
+        "React",
+        "Axios",
+        "Redux-toolkit",
+        "tailwindCSS",
+        "반응형",
+        "Figma"
+      ]
     },
     {
       "id": 2,
@@ -16,13 +39,48 @@
       "id": 3,
       "title": "Dark TODO",
       "items": ["Personal Project"],
-      "imgUrl": "darktodo-main.png"
+      "imgUrl": "darktodo-main.png",
+      "link": "https://moonozz-darkmode-todo.netlify.app/",
+      "github": "https://github.com/moonozz/darkmode-todo",
+      "figma": "https://www.figma.com/file/RFPzgmRFJuKLQ9AbDp6Dbr/DarkTODO?type=design&mode=design&t=bYtQe68fYZbg6jDs-0",
+      "notion": "https://www.notion.so/Perpett-cdea2b3b1bb14a6f92dfff322522ba51?pvs=4",
+      "date": "2023.04",
+      "info": "CRUD 및 다크모드를 적용한 TODO LIST",
+      "infoDetail": [
+        "∙ Front-end, 화면 설계, UI/UX",
+        "∙ Styled-Component를 활용해 다크모드 제작",
+        "∙ 투두리스트 CRUD",
+        "∙ 투두리스트의 상태에 따른 필터링"
+      ],
+      "skill": [
+        "html",
+        "css",
+        "Javascript",
+        "React",
+        "Styled-Component",
+        "반응형",
+        "Figma"
+      ]
     },
     {
       "id": 4,
       "title": "Nomad TODO",
       "items": ["Nomad 우수작", "Personal Project"],
-      "imgUrl": "nomadtodo-main.png"
+      "imgUrl": "nomadtodo-main.png",
+      "link": "https://moonozz.github.io/moono-nomadChallengeTodo/",
+      "github": "https://github.com/moonozz/moono-nomadChallengeTodo",
+      "figma": "https://www.figma.com/file/bd9dvREOUFLttMxVRVlOhA/nomad-DarkTODO?type=design&node-id=0-1&mode=design&t=bYtQe68fYZbg6jDs-0",
+      "notion": "https://www.notion.so/Perpett-cdea2b3b1bb14a6f92dfff322522ba51?pvs=4",
+      "date": "2023.09",
+      "info": "Nomad JS챌린지 과제로 제작한 투두리스트로 현재 시간과 날씨API 연동",
+      "infoDetail": [
+        "∙ Front-end, 화면 설계, UI/UX",
+        "∙ 실시간 시간 업데이트",
+        "∙ 위치를 받아와서 현재 지역과 해당 지역의 날씨 노출",
+        "∙ TODO 생성과 TODO의 상태 표시",
+        "∙ 생성 및 TODO에 대한 상태 localStorage에 저장해 새로고침해도 데이터 유지"
+      ],
+      "skill": ["html", "css", "Javascript", "반응형", "Figma"]
     }
   ],
   "Design": [

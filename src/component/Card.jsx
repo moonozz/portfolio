@@ -10,9 +10,12 @@ import Tag from './Tag';
 function Card({ id, text, items, imgUrl, theme }) {
   const dispatch = useDispatch();
   const project = useSelector(state => state.project);
+  const back = useSelector(state => state.back);
 
-  const onPageClick = () => {
+  const onCardClick = () => {
     dispatch(setBack('other'));
+    localStorage.setItem('back', 'other');
+
     saveProject();
     // const imgUrl = { imgUrl };
   };
@@ -32,8 +35,18 @@ function Card({ id, text, items, imgUrl, theme }) {
           imgUrl: devObject.imgUrl,
           items: devObject.items,
           title: devObject.title,
+          link: devObject.link,
+          github: devObject.github,
+          figma: devObject.figma,
+          notion: devObject.notion,
+          date: devObject.date,
+          info: devObject.info,
+          infoDetail: devObject.infoDetail,
+          skill: devObject.skill,
         }),
       );
+      // localStorage.setItem('project', JSON.stringify(project));
+
       console.log(project, 'project객체 저장완료');
     }
 
@@ -48,7 +61,7 @@ function Card({ id, text, items, imgUrl, theme }) {
     <StyleLink
       to={`/p/${id}`}
       onClick={() => {
-        onPageClick();
+        onCardClick();
       }}
       id={id}
     >
