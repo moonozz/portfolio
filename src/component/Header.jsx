@@ -23,14 +23,6 @@ function Header() {
     navi('/');
     dispatch(setBack('main'));
     localStorage.setItem('back', localGet);
-    // dispatch(
-    //   setProject({
-    //     id: '',
-    //     imgUrl: '',
-    //     items: [],
-    //     title: '',
-    //   }),
-    // );
     // console.log(project);
   };
 
