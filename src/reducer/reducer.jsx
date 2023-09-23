@@ -22,6 +22,8 @@ const initialState = {
     info: '',
     infoDetail: [],
     skill: [],
+    mainImg: '',
+    projectImg: [],
   },
 };
 

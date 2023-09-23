@@ -21,6 +21,14 @@ function ProductPage() {
   };
 
   const parsedData = JSON.parse(getLocalProject);
+
+  // const classNamePush = () => {
+  //   if (project.link === '') {
+  //     return 'project-link';
+  //   }
+  //   return 'hidden';
+  // };
+
   localSetProject();
 
   useEffect(() => {
@@ -28,6 +36,8 @@ function ProductPage() {
 
     dispatch(setBack(getLocalBack));
     console.log(project);
+    // console.log(project.link);
+    // classNamePush();
     // dispatch(setProject(parsedData));
   }, []);
 
@@ -35,7 +45,7 @@ function ProductPage() {
     <div>
       <div className="container">
         <h2 className="title">{project.title}</h2>
-        <MainImg className="main-img" />
+        <MainImg className="main-img" $image={project.mainImg} />
         <div className="project-info">
           <div className="project-title-group">
             <div className="project-info-title">
@@ -45,6 +55,7 @@ function ProductPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="project-link"
+                // className={project.link !== '' ? 'project-link' : 'hidden'}
               >
                 Link
                 <span />
@@ -91,8 +102,8 @@ function ProductPage() {
 export default ProductPage;
 
 const MainImg = styled.div`
-  /* background: center / cover no-repeat
-    url(${process.env.PUBLIC_URL}/assets/${props => props.$image}); */
+  background: center / cover no-repeat
+    url(${process.env.PUBLIC_URL}/assets/${props => props.$image});
 `;
 
 // const ProjectTitle = styled.div``;

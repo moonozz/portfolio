@@ -65,6 +65,10 @@ const GlobalStyles = createGlobalStyle`
   .scroll-hidden {
     overflow-x: hidden;
   }
+
+  .hidden {
+    display: hiddent;
+  }
   
   // tag Group 묶은 겄
   .tag-group {

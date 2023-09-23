@@ -4,7 +4,7 @@
       "id": 1,
       "title": "Perpett",
       "items": ["Team Project"],
-      "imgUrl": "perpett-main.png",
+      "imgUrl": "Home-perpett.png",
       "link": "http://testqjzlt.s3-website.ap-northeast-2.amazonaws.com/",
       "github": "https://github.com/codestates-seb/seb43_main_030",
       "figma": "https://www.figma.com/file/PFOgIanoWAdQqqgtEtRWUM/%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC-%EC%9C%A0%EC%B9%98%EC%9B%90-%EA%B8%B0%ED%9A%8D-%EB%B0%8F-%EB%94%94%EC%9E%90%EC%9D%B8?type=design&node-id=726-7469&mode=design&t=lPhmq71RjNvxv4Lm-0",
@@ -27,19 +27,15 @@
         "tailwindCSS",
         "반응형",
         "Figma"
-      ]
+      ],
+      "mainImg": "Main-perpett.png",
+      "projectImg": []
     },
     {
       "id": 2,
       "title": "Poopoo",
       "items": ["Personal Project"],
-      "imgUrl": "perpett-detail.png"
-    },
-    {
-      "id": 3,
-      "title": "Dark TODO",
-      "items": ["Personal Project"],
-      "imgUrl": "darktodo-main.png",
+      "imgUrl": "Home-poopoo.png",
       "link": "https://moonozz-darkmode-todo.netlify.app/",
       "github": "https://github.com/moonozz/darkmode-todo",
       "figma": "https://www.figma.com/file/RFPzgmRFJuKLQ9AbDp6Dbr/DarkTODO?type=design&mode=design&t=bYtQe68fYZbg6jDs-0",
@@ -60,13 +56,44 @@
         "Styled-Component",
         "반응형",
         "Figma"
-      ]
+      ],
+      "mainImg": "Main-perpett.png",
+      "projectImg": []
+    },
+    {
+      "id": 3,
+      "title": "Dark TODO",
+      "items": ["Personal Project"],
+      "imgUrl": "Home-darktodo.png",
+      "link": "https://moonozz-darkmode-todo.netlify.app/",
+      "github": "https://github.com/moonozz/darkmode-todo",
+      "figma": "https://www.figma.com/file/RFPzgmRFJuKLQ9AbDp6Dbr/DarkTODO?type=design&mode=design&t=bYtQe68fYZbg6jDs-0",
+      "notion": "https://www.notion.so/Perpett-cdea2b3b1bb14a6f92dfff322522ba51?pvs=4",
+      "date": "2023.04",
+      "info": "CRUD 및 다크모드를 적용한 TODO LIST",
+      "infoDetail": [
+        "∙ Front-end, 화면 설계, UI/UX",
+        "∙ Styled-Component를 활용해 다크모드 제작",
+        "∙ 투두리스트 CRUD",
+        "∙ 투두리스트의 상태에 따른 필터링"
+      ],
+      "skill": [
+        "html",
+        "css",
+        "Javascript",
+        "React",
+        "Styled-Component",
+        "반응형",
+        "Figma"
+      ],
+      "mainImg": "Main-darktodo.png",
+      "projectImg": []
     },
     {
       "id": 4,
       "title": "Nomad TODO",
       "items": ["Nomad 우수작", "Personal Project"],
-      "imgUrl": "nomadtodo-main.png",
+      "imgUrl": "Home-nomadtodo.png",
       "link": "https://moonozz.github.io/moono-nomadChallengeTodo/",
       "github": "https://github.com/moonozz/moono-nomadChallengeTodo",
       "figma": "https://www.figma.com/file/bd9dvREOUFLttMxVRVlOhA/nomad-DarkTODO?type=design&node-id=0-1&mode=design&t=bYtQe68fYZbg6jDs-0",
@@ -80,7 +107,9 @@
         "∙ TODO 생성과 TODO의 상태 표시",
         "∙ 생성 및 TODO에 대한 상태 localStorage에 저장해 새로고침해도 데이터 유지"
       ],
-      "skill": ["html", "css", "Javascript", "반응형", "Figma"]
+      "skill": ["html", "css", "Javascript", "반응형", "Figma"],
+      "mainImg": "Main-nomadtodo.png",
+      "projectImg": []
     }
   ],
   "Design": [
@@ -88,7 +117,7 @@
       "id": 5,
       "title": "Geeks",
       "items": ["APP", "WEB", "POS", "운영"],
-      "imgUrl": "geeks-main.png",
+      "imgUrl": "Home-geeks.png",
       "link": "",
       "github": "",
       "figma": "https://www.figma.com/file/2PG77CYIHZFITquNXzetsj/geeks-portfolio?type=design&node-id=0-1&mode=design&t=ycvQMkDMdFv3tMXF-0",
@@ -113,13 +142,15 @@
         "Zeplin",
         "Photoshop",
         "Illustrator"
-      ]
+      ],
+      "mainImg": "",
+      "projectImg": []
     },
     {
       "id": 6,
       "title": "Yellee",
       "items": ["WEB"],
-      "imgUrl": "yellee-main.png",
+      "imgUrl": "Home-yellee.png",
       "link": "",
       "github": "",
       "figma": "https://www.figma.com/file/A3a99H6LO1p6hBd43fncBx/Yellee-portfolio?type=design&node-id=0-1&mode=design&t=OQ1FlGXEi9KMJGvn-0",
@@ -131,13 +162,15 @@
         "∙ 전체 UI/UX 작업",
         "∙ 외주 개발자와 소통 및 전체 QA진행"
       ],
-      "skill": ["Sketch", "Zeplin"]
+      "skill": ["Sketch", "Zeplin"],
+      "mainImg": "",
+      "projectImg": []
     },
     {
       "id": 7,
       "title": "idus",
       "items": ["WEB", "운영"],
-      "imgUrl": "idus-main.png",
+      "imgUrl": "Home-idus.png",
       "link": "",
       "github": "",
       "figma": "https://www.figma.com/file/p4ECCly2hymqGAVaqYlmPm/idus-portfolio?type=design&mode=design&t=OQ1FlGXEi9KMJGvn-0",
@@ -149,13 +182,15 @@
         "∙ 메인(전일 매출, 작품 정보, 메시지 등 데이터 노출), 실시간 광고 입찰, 발송 정보 일괄 등록 등 페이지 작업",
         "∙ 운영 이벤트 페이지 디자인"
       ],
-      "skill": ["Sketch", "Zeplin", "Photoshop", "Illustrator"]
+      "skill": ["Sketch", "Zeplin", "Photoshop", "Illustrator"],
+      "mainImg": "",
+      "projectImg": []
     },
     {
       "id": 8,
       "title": "Dokripwoondong",
       "items": ["APP", "운영"],
-      "imgUrl": "dokrip-main.png",
+      "imgUrl": "Home-dokrip.png",
       "link": "",
       "github": "",
       "figma": "https://www.figma.com/file/6AmZZENYEVIaJfILwav13q/dokrip-portfolio?type=design&mode=design&t=OQ1FlGXEi9KMJGvn-0",
@@ -167,7 +202,9 @@
         "∙ 전체 페이지 앱 리뉴얼 기획 및 UI/UX 개선",
         "∙ 서비스 운영 및 이벤트 페이지 디자인"
       ],
-      "skill": ["Photoshop", "Illustrator"]
+      "skill": ["Photoshop", "Illustrator"],
+      "mainImg": "",
+      "projectImg": []
     }
   ]
 }

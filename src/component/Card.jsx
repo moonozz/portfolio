@@ -43,6 +43,8 @@ function Card({ id, text, items, imgUrl, theme }) {
           info: devObject.info,
           infoDetail: devObject.infoDetail,
           skill: devObject.skill,
+          mainImg: devObject.mainImg,
+          projectImg: devObject.projectImg,
         }),
       );
       // localStorage.setItem('project', JSON.stringify(project));
@@ -65,6 +67,8 @@ function Card({ id, text, items, imgUrl, theme }) {
           info: designObject.info,
           infoDetail: designObject.infoDetail,
           skill: designObject.skill,
+          mainImg: designObject.mainImg,
+          projectImg: designObject.projectImg,
         }),
       );
       console.log(project, 'project객체 저장완료');
