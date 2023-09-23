@@ -51,8 +51,22 @@ function Card({ id, text, items, imgUrl, theme }) {
     }
 
     if (designObject) {
-      console.log('Design 카테고리에서 찾은 객체:', designObject);
-      setProject(designObject);
+      dispatch(
+        setProject({
+          id: Number(designObject.id),
+          imgUrl: designObject.imgUrl,
+          items: designObject.items,
+          title: designObject.title,
+          link: designObject.link,
+          github: designObject.github,
+          figma: designObject.figma,
+          notion: designObject.notion,
+          date: designObject.date,
+          info: designObject.info,
+          infoDetail: designObject.infoDetail,
+          skill: designObject.skill,
+        }),
+      );
       console.log(project, 'project객체 저장완료');
     }
   };
