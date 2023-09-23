@@ -61,6 +61,11 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+
+  .scroll-hidden {
+    overflow-x: hidden;
+  }
+  
   // tag Group 묶은 겄
   .tag-group {
     display: flex;

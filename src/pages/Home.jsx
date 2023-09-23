@@ -42,7 +42,7 @@ function Home({ theme }) {
 
   return (
     <div>
-      <Main>
+      <Main className="scroll-hidden">
         <div>
           <FlowBox>
             <FlowTrack>
