@@ -23,7 +23,9 @@ const initialState = {
     infoDetail: [],
     skill: [],
     mainImg: '',
-    projectImg: [],
+    projectImgPC: [],
+    projectGif: [],
+    projectImgMobile: [],
   },
 };
 

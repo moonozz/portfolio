@@ -9,13 +9,8 @@ import { useScrollEvent } from '../hook/useScrollEvent';
 import Tag from './Tag';
 
 function Card({ id, text, items, imgUrl, theme }) {
-  // const ref = useRef(null);
-
   const dispatch = useDispatch();
-  // const position = useSelector(state => state.position);
-  // const project = useSelector(state => state.project);
-  // const back = useSelector(state => state.back);
-  // const viewport = useSelector(state => state.viewport);
+
   const { ref, isInViewport } = useScrollEvent();
 
   const onCardClick = () => {
@@ -51,7 +46,9 @@ function Card({ id, text, items, imgUrl, theme }) {
           infoDetail: devObject.infoDetail,
           skill: devObject.skill,
           mainImg: devObject.mainImg,
-          projectImg: devObject.projectImg,
+          projectImgPC: devObject.projectImgPC,
+          projectGif: devObject.projectGif,
+          projectImgMobile: devObject.projectImgMobile,
         }),
       );
     }
@@ -72,7 +69,9 @@ function Card({ id, text, items, imgUrl, theme }) {
           infoDetail: designObject.infoDetail,
           skill: designObject.skill,
           mainImg: designObject.mainImg,
-          projectImg: designObject.projectImg,
+          projectImgPC: designObject.projectImgPC,
+          projectGif: designObject.projectGif,
+          projectImgMobile: designObject.projectImgMobile,
         }),
       );
     }
