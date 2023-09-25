@@ -8,6 +8,7 @@ const color = {
   white: '#fff',
   black: '#000',
   lightGrayYello: '#FCF6EF',
+  lightGray: '#F5F5F5',
   main: '#E2DCC1',
   mainLight: '#F0EEE3',
   mainDark: '#574910',

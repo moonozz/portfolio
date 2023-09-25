@@ -112,19 +112,19 @@ const GlobalStyles = createGlobalStyle`
     gap: 2.8rem;
   }
   .snsBtnGroup a {
-    width: 2.8rem;
-    height: 2.8rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 100%;
   }
   .snsBtnGroup a svg {
-    width: 2.8rem;
-    height: 2.8rem;
+    width: 2rem;
+    height: 2rem;
   }
 
   
   /* 각 프로젝트 별 페이지 관련 css */
   .container {
-    background-color: ${({ theme }) => theme.color.white};
+    background-color: ${({ theme }) => theme.color.lightGray};
     color: ${({ theme }) => theme.color.black};
     position: relative;
     padding-top: 4.8rem;
@@ -151,13 +151,12 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .main-img {
+    position: relative;
+  img {
     width: 100%;
-    height: 40vw;
-    background-color: gray;
-
-    @media ${({ theme }) => theme.tablet} {
-      height: 50rem;
-    }
+    overflow-clip-margin: content-box;
+    overflow: clip;
+  }
   }
 
   .project-info {
@@ -179,14 +178,12 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .project-info-title {
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-between; */
-    /* position: relative; */
     display: grid;
     grid-template-columns: 7fr 1fr;
+    margin-bottom: 2.4rem;
     @media ${({ theme }) => theme.tablet} {
       grid-template-columns: 1fr;
+      margin-bottom: 3.2rem;
     }
   }
   .project-info-title h3 {
@@ -259,7 +256,12 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .project-info-detail {
-    font-size: 1.6rem
+    font-size: 1.6rem;
+    margin-top: 4.8rem;
+
+    @media ${({ theme }) => theme.tablet} {
+      margin-top: 0rem;
+    }
   }
   .project-date {
     margin: 1rem 0 2.4rem;
@@ -268,6 +270,67 @@ const GlobalStyles = createGlobalStyle`
   .project-info-detail li {
     display: block;
     margin-top: 0.4rem;
+  }
+
+  .project-img {
+    margin: 4.8rem 0;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 2rem;
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 150rem;
+      overflow-clip-margin: content-box;
+      overflow: clip;
+    }
+
+    @media ${({ theme }) => theme.tablet} {
+      margin: 9rem 0;
+    }
+  }
+
+  .pc-img, .img-gif {
+    max-width: 150rem;
+    margin-bottom: 4rem;
+    img {
+      margin-bottom: 4rem;
+    }
+
+    @media ${({ theme }) => theme.tablet} {
+      margin-bottom: 10rem;
+      img {
+        margin-bottom: 10rem;
+      }
+    }
+  }
+
+  .m-img {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+    img {
+      max-width: 36rem;
+    }
+    
+    @media ${({ theme }) => theme.mobile} {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 4rem;
+      img {
+        max-width: 32rem;
+      }
+    }
+    @media ${({ theme }) => theme.tablet} {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 10rem;
+      img {
+        max-width: 32rem;
+      }
+    }
+
   }
 `;
 

@@ -60,14 +60,16 @@ function Home({ theme }) {
       </Main>
       <Content>
         <Sticky>
-          <StickyTxt>
-            <h3>
-              Frontend
-              <br />
-              Developer
-            </h3>
-            <h3>moono</h3>
-            <BtnDiv className="snsBtnGroup">
+          <StickyContent>
+            <StickyTxt>
+              <h3>
+                Frontend
+                <br />
+                Developer
+              </h3>
+              <h3>moono</h3>
+            </StickyTxt>
+            <div className="snsBtnGroup">
               <a
                 href="https://github.com/moonozz"
                 target="_blank"
@@ -84,8 +86,8 @@ function Home({ theme }) {
               >
                 <BtnVelog />
               </a>
-            </BtnDiv>
-          </StickyTxt>
+            </div>
+          </StickyContent>
         </Sticky>
         <ScrollContent>
           <Intro>
@@ -297,28 +299,14 @@ const Content = styled.section`
 
 const Sticky = styled.div`
   width: 100%;
-  h3 {
-    font-family: 'Clash Display';
-    line-height: 1.1;
-    font-weight: 800;
-    font-size: 12vw;
-    color: ${({ theme }) => theme.color.black};
-  }
-  h3:first-child {
-    margin-bottom: 2rem;
-    font-weight: 400;
-  }
 
   @media ${({ theme }) => theme.tablet} {
     width: 50%;
     z-index: 10;
-    h3 {
-      font-size: 7vw;
-    }
   }
 `;
 
-const StickyTxt = styled.div`
+const StickyContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -331,10 +319,20 @@ const StickyTxt = styled.div`
   }
 `;
 
-const BtnDiv = styled.div`
-  margin-top: 4rem;
+const StickyTxt = styled.div`
+  font-family: 'Clash Display';
+  line-height: 1.1;
+  font-weight: 800;
+  font-size: 12vw;
+  margin-bottom: 4rem;
+  color: ${({ theme }) => theme.color.black};
+  h3:first-child {
+    margin-bottom: 2rem;
+    font-weight: 400;
+  }
   @media ${({ theme }) => theme.tablet} {
-    margin-top: 8rem;
+    font-size: 7vw;
+    margin-bottom: 8rem;
   }
 `;
 
