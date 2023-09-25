@@ -2,13 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { setBack, setProject } from '../actions/actions';
+import { setBack, setProject, setPosition } from '../actions/actions';
 
 function Header() {
   const navi = useNavigate();
   const dispatch = useDispatch();
   const back = useSelector(state => state.back);
   const project = useSelector(state => state.project);
+  const position = useSelector(state => state.position);
 
   const localGet = localStorage.getItem('back');
 
@@ -17,23 +18,25 @@ function Header() {
     window.location.reload();
     dispatch(setBack('main'));
     localStorage.setItem('back', localGet);
+    window.scroll(0, 0);
+    dispatch(setPosition(0));
   };
 
   const onMainClick = () => {
     navi('/');
     dispatch(setBack('main'));
     localStorage.setItem('back', localGet);
-    // console.log(project);
+    window.scroll(0, position);
   };
 
   return (
-    <HeaderSec>
+    <HeaderSec back={back}>
       {back === 'main' ? (
         <button type="button" aria-label="home" onClick={reload}>
           Moono
         </button>
       ) : (
-        <button type="button" aria-label="home" onClick={() => onMainClick()}>
+        <button type="button" aria-label="home" onClick={onMainClick}>
           Back to Main
         </button>
       )}
@@ -58,8 +61,8 @@ const HeaderSec = styled.header`
     font-size: 2.4rem;
     font-weight: 600;
     /* color: ${({ theme }) => theme.color.white}; */
-    color: ${({ theme, backPage }) =>
-      backPage === 'main' ? theme.color.white : theme.color.black};
+    color: ${({ theme, back }) =>
+      back === 'main' ? theme.color.white : theme.color.black};
   }
   @media ${({ theme }) => theme.tablet} {
     width: calc(100% - 6.4rem);

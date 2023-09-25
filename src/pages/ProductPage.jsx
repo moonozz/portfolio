@@ -10,6 +10,7 @@ import Tag from '../component/Tag';
 function ProductPage() {
   const dispatch = useDispatch();
   const project = useSelector(state => state.project);
+  const position = useSelector(state => state.position);
 
   const getLocalBack = localStorage.getItem('back');
   const getLocalProject = localStorage.getItem('project');
@@ -36,6 +37,7 @@ function ProductPage() {
 
     dispatch(setBack(getLocalBack));
     console.log(project);
+    console.log(position);
     // console.log(project.link);
     // classNamePush();
     // dispatch(setProject(parsedData));
@@ -54,8 +56,8 @@ function ProductPage() {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="project-link"
-                // className={project.link !== '' ? 'project-link' : 'hidden'}
+                // className="project-link"
+                className={project.link !== '' ? 'project-link' : 'hidden'}
               >
                 Link
                 <span />

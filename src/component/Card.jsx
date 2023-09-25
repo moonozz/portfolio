@@ -2,13 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled, { withTheme } from 'styled-components';
 import { useSelector, useDispatch } from 'react-redux';
-import { setBack, setProject } from '../actions/actions';
+import { setBack, setProject, setPosition } from '../actions/actions';
 import data from '../data/data.json';
 
 import Tag from './Tag';
 
 function Card({ id, text, items, imgUrl, theme }) {
   const dispatch = useDispatch();
+  const position = useSelector(state => state.position);
   const project = useSelector(state => state.project);
   const back = useSelector(state => state.back);
 
@@ -17,7 +18,11 @@ function Card({ id, text, items, imgUrl, theme }) {
     localStorage.setItem('back', 'other');
 
     saveProject();
-    // const imgUrl = { imgUrl };
+    onScroll();
+  };
+
+  const onScroll = () => {
+    dispatch(setPosition(window.scrollY));
   };
 
   const saveProject = () => {
@@ -26,9 +31,6 @@ function Card({ id, text, items, imgUrl, theme }) {
     const designObject = data.Design.find(item => item.id === findId);
 
     if (devObject) {
-      // console.log('Dev 카테고리에서 찾은 객체:', devObject);
-      // console.log(devObject.id);
-      // console.log(devObject.items);
       dispatch(
         setProject({
           id: Number(devObject.id),
@@ -47,9 +49,6 @@ function Card({ id, text, items, imgUrl, theme }) {
           projectImg: devObject.projectImg,
         }),
       );
-      // localStorage.setItem('project', JSON.stringify(project));
-
-      console.log(project, 'project객체 저장완료');
     }
 
     if (designObject) {
@@ -71,7 +70,6 @@ function Card({ id, text, items, imgUrl, theme }) {
           projectImg: designObject.projectImg,
         }),
       );
-      console.log(project, 'project객체 저장완료');
     }
   };
 
