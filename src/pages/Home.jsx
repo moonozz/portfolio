@@ -3,7 +3,6 @@ import { useState, useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setPosition, setBack } from '../actions/actions';
 import data from '../data/data.json';
-import { useScrollEvent } from '../hook/useScrollEvent';
 
 import Tag from '../component/Tag';
 import Card from '../component/Card';
@@ -11,12 +10,8 @@ import { ReactComponent as BtnVelog } from '../images/velog.svg';
 import { ReactComponent as BtnGithub } from '../images/github.svg';
 
 function Home({ theme }) {
-  const ref = useRef(null);
-
   const dispatch = useDispatch();
   const position = useSelector(state => state.position);
-  const back = useSelector(state => state.back);
-  const viewport = useSelector(state => state.viewport);
 
   const { Dev } = data;
   const { Design } = data;
@@ -64,7 +59,7 @@ function Home({ theme }) {
         <Arrow />
       </Main>
       <Content>
-        <Sticky className={viewport ? 'frame-in' : ''} ref={ref}>
+        <Sticky>
           <StickyTxt>
             <h3>
               Frontend

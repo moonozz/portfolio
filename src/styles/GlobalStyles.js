@@ -1,5 +1,19 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, keyframes } from 'styled-components';
 import reset from 'styled-reset';
+
+// const frameInAnimation = keyframes`
+//     from {
+//       opacity: 0;
+//       transform: translateY(50%);
+//       display: none;
+//     }
+
+//     to {
+//       opacity: 1;
+//       transform: translateY(0%);
+//       display: block;
+//     }
+//   `;
 
 const GlobalStyles = createGlobalStyle`
   ${reset}
@@ -62,12 +76,23 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
 
+  
+  .animation-default {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  .frame-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1s ease-in-out;
+  }
+
   .scroll-hidden {
     overflow-x: hidden;
   }
 
   .hidden {
-    display: hiddent;
+    display: none;
   }
   
   // tag Group 묶은 겄
@@ -103,7 +128,8 @@ const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.color.black};
     position: relative;
     padding-top: 4.8rem;
-    font-size: 1.4rem
+    font-size: 1.4rem;
+    overflow-x: hidden;
 
     @media ${({ theme }) => theme.tablet} {
       padding-top: 7rem;
@@ -172,7 +198,7 @@ const GlobalStyles = createGlobalStyle`
       font-size: 3.2rem;
     }
   }
-  .project-info-title a {
+  .project-link {
     position: relative;
     color: ${({ theme }) => theme.color.black};
     width: 9rem;
@@ -185,7 +211,7 @@ const GlobalStyles = createGlobalStyle`
       width: 10rem;
     }
   }
-  .project-info-title a span {
+  .project-link span {
     content: "";
     width: 3rem;
     border-bottom: 0.1rem solid ${({ theme }) => theme.color.black};
@@ -215,21 +241,21 @@ const GlobalStyles = createGlobalStyle`
     }
 
     @media ${({ theme }) => theme.tablet} {
-    width: 6rem;
+      width: 6rem;
 
-    &::before {
-      width: 10%;
-      top: -0.2rem;
-      left: 91%;
-      transform: rotateZ(45deg);
+      &::before {
+        width: 10%;
+        top: -0.2rem;
+        left: 91%;
+        transform: rotateZ(45deg);
+      }
+      &::after {
+        width: 10%;
+        top: 0.2rem;
+        left: 91%;
+        transform: rotateZ(-45deg);
+      }
     }
-    &::after {
-      width: 10%;
-      top: 0.2rem;
-      left: 91%;
-      transform: rotateZ(-45deg);
-    }
-  }
   }
 
   .project-info-detail {

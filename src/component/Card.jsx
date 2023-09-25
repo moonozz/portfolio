@@ -1,17 +1,22 @@
-import React from 'react';
+import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import styled, { withTheme } from 'styled-components';
 import { useSelector, useDispatch } from 'react-redux';
 import { setBack, setProject, setPosition } from '../actions/actions';
 import data from '../data/data.json';
+import { useScrollEvent } from '../hook/useScrollEvent';
 
 import Tag from './Tag';
 
 function Card({ id, text, items, imgUrl, theme }) {
+  // const ref = useRef(null);
+
   const dispatch = useDispatch();
-  const position = useSelector(state => state.position);
-  const project = useSelector(state => state.project);
-  const back = useSelector(state => state.back);
+  // const position = useSelector(state => state.position);
+  // const project = useSelector(state => state.project);
+  // const back = useSelector(state => state.back);
+  // const viewport = useSelector(state => state.viewport);
+  const { ref, isInViewport } = useScrollEvent();
 
   const onCardClick = () => {
     dispatch(setBack('other'));
@@ -81,7 +86,12 @@ function Card({ id, text, items, imgUrl, theme }) {
       }}
       id={id}
     >
-      <CardDiv>
+      <CardDiv
+        ref={ref}
+        className={
+          isInViewport ? 'animation-default frame-in' : 'animation-default'
+        }
+      >
         <Img $image={imgUrl} />
         <Content>
           <Title>{text}</Title>
@@ -111,6 +121,7 @@ const CardDiv = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 2.4rem;
+  will-change: animation, keyframe;
 `;
 
 const Img = styled.div`

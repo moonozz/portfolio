@@ -35,7 +35,10 @@
         "variables": false,
         "allowNamedExports": false
       }
-    ]
+    ],
+    "import/prefer-default-export": "off",
+    "react/jsx-props-no-spreading": ["warn"], // props로 받은 것 바로 props로 넘기기 허용
+    "consistent-return": "off"
     // "allowForLoopAfterthoughts": true
   }
 
