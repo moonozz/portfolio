@@ -24,11 +24,6 @@ export const useScrollEvent = () => {
     const observer = new IntersectionObserver(callback, options);
     observer.observe(ref.current); // 요소 관찰 시작
 
-    // return () => {
-    //   if (observer) {
-    //     observer.disconnect(); // 컴포넌트 언마운트 시 관찰 중단
-    //   }
-    // };
     if (ref.current) {
       observer.observe(ref.current);
     }
