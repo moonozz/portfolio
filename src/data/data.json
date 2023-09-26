@@ -37,7 +37,7 @@
         "Perpett-pc-05.png",
         "Perpett-pc-06.png"
       ],
-      "projectGif": ["Perpett-gif-01.gif", "Perpett-gif-02.gif"],
+      "projectGif": ["Perpett-gif-01.gif"],
       "projectImgMobile": [
         "Perpett-m-00.png",
         "Perpett-m-01.png",
@@ -108,14 +108,20 @@
         "Figma"
       ],
       "mainImg": "Main-darktodo.png",
-      "projectImgPC": [],
-      "projectGif": [],
+      "projectImgPC": [
+        "DarkTODO-pc-01.png",
+        "DarkTODO-pc-02.png",
+        "DarkTODO-pc-03.png",
+        "DarkTODO-pc-04.png",
+        "DarkTODO-pc-05.png"
+      ],
+      "projectGif": ["DarkTODO-gif-01.gif"],
       "projectImgMobile": []
     },
     {
       "id": 4,
-      "title": "Nomad TODO",
-      "items": ["Nomad 우수작", "Personal Project"],
+      "title": "Scholl Meals",
+      "items": ["Personal Project"],
       "imgUrl": "Home-nomadtodo.png",
       "link": "https://moonozz.github.io/moono-nomadChallengeTodo/",
       "github": "https://github.com/moonozz/moono-nomadChallengeTodo",
@@ -135,11 +141,43 @@
       "projectImgPC": [],
       "projectGif": [],
       "projectImgMobile": []
+    },
+    {
+      "id": 5,
+      "title": "Nomad TODO",
+      "items": ["Nomad 우수작", "Personal Project"],
+      "imgUrl": "Home-nomadtodo.png",
+      "link": "https://moonozz.github.io/moono-nomadChallengeTodo/",
+      "github": "https://github.com/moonozz/moono-nomadChallengeTodo",
+      "figma": "https://www.figma.com/file/bd9dvREOUFLttMxVRVlOhA/nomad-DarkTODO?type=design&node-id=0-1&mode=design&t=bYtQe68fYZbg6jDs-0",
+      "notion": "https://www.notion.so/Perpett-cdea2b3b1bb14a6f92dfff322522ba51?pvs=4",
+      "date": "2023.09",
+      "info": "Nomad JS챌린지 과제로 제작한 투두리스트로 현재 시간과 날씨API 연동",
+      "infoDetail": [
+        "∙ Front-end, 화면 설계, UI/UX",
+        "∙ 실시간 시간 업데이트",
+        "∙ 위치를 받아와서 현재 지역과 해당 지역의 날씨 노출",
+        "∙ TODO 생성과 TODO의 상태 표시",
+        "∙ 생성 및 TODO에 대한 상태 localStorage에 저장해 새로고침해도 데이터 유지"
+      ],
+      "skill": ["html", "css", "Javascript", "반응형", "Figma"],
+      "mainImg": "Main-nomadtodo.png",
+      "projectImgPC": [
+        "NomadTODO-pc-01.png",
+        "NomadTODO-pc-02.png",
+        "NomadTODO-pc-03.png",
+        "NomadTODO-pc-04.png",
+        "NomadTODO-pc-05.png",
+        "NomadTODO-pc-06.png",
+        "NomadTODO-pc-07.png"
+      ],
+      "projectGif": ["NomadTODO-gif-01.gif"],
+      "projectImgMobile": []
     }
   ],
   "Design": [
     {
-      "id": 5,
+      "id": 6,
       "title": "Geeks",
       "items": ["APP", "WEB", "POS", "운영"],
       "imgUrl": "Home-geeks.png",
@@ -168,13 +206,13 @@
         "Photoshop",
         "Illustrator"
       ],
-      "mainImg": "",
+      "mainImg": "Main-geeks.png",
       "projectImgPC": [],
       "projectGif": [],
       "projectImgMobile": []
     },
     {
-      "id": 6,
+      "id": 7,
       "title": "Yellee",
       "items": ["WEB"],
       "imgUrl": "Home-yellee.png",
@@ -190,29 +228,7 @@
         "∙ 외주 개발자와 소통 및 전체 QA진행"
       ],
       "skill": ["Sketch", "Zeplin"],
-      "mainImg": "",
-      "projectImgPC": [],
-      "projectGif": [],
-      "projectImgMobile": []
-    },
-    {
-      "id": 7,
-      "title": "idus",
-      "items": ["WEB", "운영"],
-      "imgUrl": "Home-idus.png",
-      "link": "",
-      "github": "",
-      "figma": "https://www.figma.com/file/p4ECCly2hymqGAVaqYlmPm/idus-portfolio?type=design&mode=design&t=OQ1FlGXEi9KMJGvn-0",
-      "notion": "https://www.notion.so/Perpett-cdea2b3b1bb14a6f92dfff322522ba51?pvs=4",
-      "date": "2018.03 - 06",
-      "info": "기존 컴포넌트에 맞춰 판매자 웹페이지 등 일부 페이지 기획 & UI/UX 작업 및 운영 관련 디자인 업무 진행",
-      "infoDetail": [
-        "∙ 판매자 웹 추가페이지 기획, 디자인",
-        "∙ 메인(전일 매출, 작품 정보, 메시지 등 데이터 노출), 실시간 광고 입찰, 발송 정보 일괄 등록 등 페이지 작업",
-        "∙ 운영 이벤트 페이지 디자인"
-      ],
-      "skill": ["Sketch", "Zeplin", "Photoshop", "Illustrator"],
-      "mainImg": "",
+      "mainImg": "Main-yellee.png",
       "projectImgPC": [],
       "projectGif": [],
       "projectImgMobile": []
@@ -234,7 +250,7 @@
         "∙ 서비스 운영 및 이벤트 페이지 디자인"
       ],
       "skill": ["Photoshop", "Illustrator"],
-      "mainImg": "",
+      "mainImg": "Main-dokrip.png",
       "projectImgPC": [],
       "projectGif": [],
       "projectImgMobile": []
