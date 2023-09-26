@@ -123,78 +123,7 @@ const GlobalStyles = createGlobalStyle`
 
   
   /* 각 프로젝트 별 페이지 관련 css */
-  .container {
-    background-color: ${({ theme }) => theme.color.lightGray};
-    color: ${({ theme }) => theme.color.black};
-    position: relative;
-    padding-top: 4.8rem;
-    font-size: 1.4rem;
-    overflow-x: hidden;
 
-    @media ${({ theme }) => theme.tablet} {
-      padding-top: 7rem;
-      font-size: 1.6rem
-    }
-  }
-
-  .title {
-    display: none;
-
-    @media ${({ theme }) => theme.tablet} {
-      display: block;
-      font-family: 'Clash Display';
-      /* color: ${({ theme }) => theme.color.mainDark}; */
-      font-size: 9.6rem;
-      font-weight: 900;
-      padding: 9.6rem 8rem 3.2rem;
-    }
-  }
-
-  .main-img {
-    position: relative;
-  img {
-    width: 100%;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-  }
-  }
-
-  .project-info {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 6rem 2rem 16rem;
-    @media ${({ theme }) => theme.tablet} {
-      grid-template-columns: 2fr 3fr;
-      padding: 12rem 8rem 16rem;
-    }
-  }
-
-  .project-title-group {
-    display: grid;
-    grid-template-columns: 1fr;
-    @media ${({ theme }) => theme.tablet} {
-      /* flex-direction: row; */
-    }
-  }
-
-  .project-info-title {
-    display: grid;
-    grid-template-columns: 7fr 1fr;
-    margin-bottom: 2.4rem;
-    @media ${({ theme }) => theme.tablet} {
-      grid-template-columns: 1fr;
-      margin-bottom: 3.2rem;
-    }
-  }
-  .project-info-title h3 {
-    font-family: "Clash Display";
-    font-size: 4rem;
-    font-weight: 900;
-
-    @media ${({ theme }) => theme.tablet} {
-      font-size: 3.2rem;
-    }
-  }
   .project-link {
     position: relative;
     color: ${({ theme }) => theme.color.black};
@@ -254,45 +183,7 @@ const GlobalStyles = createGlobalStyle`
       }
     }
   }
-
-  .project-info-detail {
-    font-size: 1.6rem;
-    margin-top: 4.8rem;
-
-    @media ${({ theme }) => theme.tablet} {
-      margin-top: 0rem;
-    }
-  }
-  .project-date {
-    margin: 1rem 0 2.4rem;
-    font-weight: 600;
-  }
-  .project-info-detail li {
-    display: block;
-    margin-top: 0.4rem;
-  }
-
-  .project-img {
-    margin: 4.8rem 0;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0 2rem;
-
-    img {
-      display: block;
-      width: 100%;
-      max-width: 150rem;
-      overflow-clip-margin: content-box;
-      overflow: clip;
-    }
-
-    @media ${({ theme }) => theme.tablet} {
-      margin: 9rem 0;
-    }
-  }
-
+  
   .pc-img, .img-gif {
     max-width: 150rem;
     margin-bottom: 4rem;

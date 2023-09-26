@@ -35,17 +35,17 @@ function ProductPage() {
 
   return (
     <div>
-      <div className="container">
-        <h2 className="title">{project.title}</h2>
-        <MainImg className="main-img">
+      <Container>
+        <Title>{project.title}</Title>
+        <MainImg>
           <img
             src={`${process.env.PUBLIC_URL}/assets/${project.mainImg}`}
             alt={`${project.title} 메인이미지`}
           />
         </MainImg>
-        <div className="project-info">
-          <div className="project-title-group">
-            <div className="project-info-title">
+        <ProjectInfo>
+          <ProjectTitleGroup>
+            <ProjectInfoTitle>
               <h3>{project.title}</h3>
               <a
                 href={project.link}
@@ -56,7 +56,7 @@ function ProductPage() {
                 Link
                 <span />
               </a>
-            </div>
+            </ProjectInfoTitle>
             <div className="snsBtnGroup">
               <a
                 href={project.github}
@@ -76,9 +76,9 @@ function ProductPage() {
                 <BtnNotion />
               </a>
             </div>
-          </div>
-          <div className="project-info-detail">
-            <p className="project-date">{project.date}</p>
+          </ProjectTitleGroup>
+          <ProjectInfoDetail>
+            <ProjectDate>{project.date}</ProjectDate>
             <p>{project.info}</p>
             <ul>
               {project.infoDetail.map(el => {
@@ -88,9 +88,9 @@ function ProductPage() {
             <div className="tag-group">
               <Tag key={project.skill.indexOf} items={project.skill} />
             </div>
-          </div>
-        </div>
-        <div className="project-img">
+          </ProjectInfoDetail>
+        </ProjectInfo>
+        <ProjectImg>
           <div className="pc-img">
             {project.projectImgPC.map(el => {
               return (
@@ -124,13 +124,40 @@ function ProductPage() {
               );
             })}
           </div>
-        </div>
-      </div>
+        </ProjectImg>
+      </Container>
     </div>
   );
 }
 
 export default ProductPage;
+
+const Container = styled.div`
+  background-color: ${({ theme }) => theme.color.lightGray};
+  color: ${({ theme }) => theme.color.black};
+  position: relative;
+  padding-top: 4.8rem;
+  font-size: 1.4rem;
+  overflow-x: hidden;
+
+  @media ${({ theme }) => theme.tablet} {
+    padding-top: 7rem;
+    font-size: 1.6rem;
+  }
+`;
+
+const Title = styled.h2`
+  display: none;
+
+  @media ${({ theme }) => theme.tablet} {
+    display: block;
+    font-family: 'Clash Display';
+    /* color: ${({ theme }) => theme.color.mainDark}; */
+    font-size: 9.6rem;
+    font-weight: 900;
+    padding: 9.6rem 8rem 3.2rem;
+  }
+`;
 
 const MainImg = styled.div`
   /* width: 100%; */
@@ -139,6 +166,82 @@ const MainImg = styled.div`
     width: 100%;
     overflow-clip-margin: content-box;
     overflow: clip;
+  }
+`;
+
+const ProjectInfo = styled.section`
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 6rem 2rem 16rem;
+  @media ${({ theme }) => theme.tablet} {
+    grid-template-columns: 2fr 3fr;
+    padding: 12rem 8rem 16rem;
+  }
+`;
+
+const ProjectTitleGroup = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+`;
+
+const ProjectInfoTitle = styled.div`
+  display: grid;
+  grid-template-columns: 7fr 1fr;
+  margin-bottom: 2.4rem;
+
+  @media ${({ theme }) => theme.tablet} {
+    grid-template-columns: 1fr;
+    margin-bottom: 3.2rem;
+  }
+
+  h3 {
+    font-family: 'Clash Display';
+    font-size: 4rem;
+    font-weight: 900;
+
+    @media ${({ theme }) => theme.tablet} {
+      font-size: 3.2rem;
+    }
+  }
+`;
+
+const ProjectInfoDetail = styled.div`
+  font-size: 1.6rem;
+  margin-top: 4.8rem;
+
+  li {
+    display: block;
+    margin-top: 0.4rem;
+  }
+
+  @media ${({ theme }) => theme.tablet} {
+    margin-top: 0rem;
+  }
+`;
+
+const ProjectDate = styled.p`
+  margin: 1rem 0 2.4rem;
+  font-weight: 600;
+`;
+
+const ProjectImg = styled.section`
+  margin: 4.8rem 0;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 2rem;
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: 150rem;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+  }
+
+  @media ${({ theme }) => theme.tablet} {
+    margin: 9rem 0;
   }
 `;
 
