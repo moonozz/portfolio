@@ -122,7 +122,7 @@ function Home({ theme }) {
               <Tag
                 key={skillArr.indexOf}
                 items={skillArr}
-                borderColor={theme.color.black}
+                borderColor={theme.color.main}
               />
             </TagGroup>
           </Intro>
@@ -165,9 +165,9 @@ export default withTheme(Home);
 const Main = styled.section`
   display: flex;
   position: relative;
-  background-color: ${({ theme }) => theme.color.black};
+  background-color: ${({ theme }) => theme.color.mainLight};
   justify-content: center;
-  height: 100vh;
+  height: 95vh;
   width: 100vw;
 `;
 
@@ -217,7 +217,7 @@ const FlowTitle = styled.div`
 `;
 
 const Outline = styled.span`
-  color: ${({ theme }) => theme.color.black};
+  color: ${({ theme }) => theme.color.mainLight};
   -webkit-text-stroke: 0.1rem ${({ theme }) => theme.color.main};
   display: inline-block;
   font-weight: 900;
@@ -241,14 +241,14 @@ const Arrow = styled.span`
   position: absolute;
   bottom: 5%;
   width: 3rem;
-  height: 0.1rem;
-  background-color: ${({ theme }) => theme.color.white};
+  height: 0.2rem;
+  background-color: ${({ theme }) => theme.color.main};
   transform: rotateZ(90deg);
   animation: ${arrowAni} 1s linear infinite;
 
   &::before {
     content: '';
-    border-bottom: 0.1rem solid ${({ theme }) => theme.color.white};
+    border-bottom: 0.2rem solid ${({ theme }) => theme.color.main};
     position: absolute;
     width: 20%;
 
@@ -258,7 +258,7 @@ const Arrow = styled.span`
   }
   &::after {
     content: '';
-    border-bottom: 0.1rem solid ${({ theme }) => theme.color.white};
+    border-bottom: 0.2rem solid ${({ theme }) => theme.color.main};
     position: absolute;
     width: 20%;
 
@@ -285,7 +285,7 @@ const Arrow = styled.span`
 `;
 
 const Content = styled.section`
-  background-color: ${({ theme }) => theme.color.main};
+  background-color: ${({ theme }) => theme.color.lightGray100};
   display: flex;
   position: relative;
   flex-direction: column;
@@ -329,6 +329,9 @@ const StickyTxt = styled.div`
   h3:first-child {
     margin-bottom: 2rem;
     font-weight: 400;
+  }
+  h3:last-child {
+    color: ${({ theme }) => theme.color.main};
   }
   @media ${({ theme }) => theme.tablet} {
     font-size: 7vw;

@@ -62,7 +62,7 @@ const HeaderSec = styled.header`
     font-weight: 600;
     /* color: ${({ theme }) => theme.color.white}; */
     color: ${({ theme, back }) =>
-      back === 'main' ? theme.color.white : theme.color.black};
+      back === 'main' ? theme.color.main : theme.color.black};
   }
   @media ${({ theme }) => theme.tablet} {
     width: calc(100% - 6.4rem);

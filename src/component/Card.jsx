@@ -97,7 +97,7 @@ function Card({ id, text, items, imgUrl, theme }) {
           <TagGroup>
             <Tag
               items={items}
-              borderColor={theme.color.mainDark}
+              borderColor={theme.color.black}
               key={items.index}
             />
           </TagGroup>
@@ -111,8 +111,9 @@ export default withTheme(Card);
 
 const StyleLink = styled(Link)`
   &:hover {
-    text-decoration: none;
-    font-weight: 900;
+    /* text-decoration: none; */
+    /* font-weight: 900; */
+    /* color: ${({ theme }) => theme.color.main}; */
   }
 `;
 
@@ -121,6 +122,10 @@ const CardDiv = styled.div`
   flex-direction: column;
   margin-bottom: 2.4rem;
   will-change: animation, keyframe;
+  /* color: ${({ theme }) => theme.color.black}; */
+  &:hover {
+    /* color: ${({ theme }) => theme.color.main}; */
+  }
 `;
 
 const Img = styled.div`
@@ -130,11 +135,12 @@ const Img = styled.div`
   height: 12rem;
   background: center / cover no-repeat
     url(${process.env.PUBLIC_URL}/assets/${props => props.$image});
-  border: 0.1rem solid ${({ theme }) => theme.color.mainDark};
   transition: all 0.5s;
-  /* transition: height cubic-bezier(0.4, 0, 1, 1) 300ms; */
+  color: ${({ theme }) => theme.color.black};
+
   &:hover {
     height: 30.8rem;
+    color: ${({ theme }) => theme.color.main};
   }
   &::after {
     position: absolute;
@@ -143,9 +149,8 @@ const Img = styled.div`
     left: 0;
     bottom: 0;
     content: '';
-    background-color: ${({ theme }) => theme.color.mainDark};
-    /* mix-blend-mode: normal; */
-    opacity: 0.7;
+    background-color: ${({ theme }) => theme.color.black};
+    opacity: 0.4;
     border-radius: 1.2rem;
   }
 `;
@@ -155,6 +160,11 @@ const Content = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 0.8rem;
+  &:hover {
+    text-decoration: none;
+    /* font-weight: 900; */
+    color: ${({ theme }) => theme.color.main};
+  }
 `;
 
 const TagGroup = styled.div`
@@ -162,7 +172,7 @@ const TagGroup = styled.div`
 `;
 
 const Title = styled.h4`
-  color: ${({ theme }) => theme.color.mainDark};
+  color: ${({ theme }) => theme.color.black};
   font-family: 'Clash Display';
   font-size: 1.8rem;
 

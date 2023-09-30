@@ -133,7 +133,7 @@ function ProductPage() {
 export default ProductPage;
 
 const Container = styled.div`
-  background-color: ${({ theme }) => theme.color.lightGray};
+  background-color: ${({ theme }) => theme.color.lightGray150};
   color: ${({ theme }) => theme.color.black};
   position: relative;
   padding-top: 4.8rem;
@@ -152,7 +152,6 @@ const Title = styled.h2`
   @media ${({ theme }) => theme.tablet} {
     display: block;
     font-family: 'Clash Display';
-    /* color: ${({ theme }) => theme.color.mainDark}; */
     font-size: 9.6rem;
     font-weight: 900;
     padding: 9.6rem 8rem 3.2rem;
