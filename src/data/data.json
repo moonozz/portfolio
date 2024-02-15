@@ -83,6 +83,53 @@
     },
     {
       "id": 3,
+      "title": "Scholl Meals",
+      "items": ["Personal Project"],
+      "imgUrl": "Home-schoolMeals.png",
+      "link": "https://moonozz-school-meals.netlify.app/",
+      "github": "https://github.com/moonozz/school-meals?tab=readme-ov-file",
+      "figma": "https://www.figma.com/file/8S8z4Kr3N2b6S6GC61KEPf/school-meal?type=design&mode=design&t=Q5A6DXtngPXwCztk-0",
+      "notion": "https://www.notion.so/School-Meals-4ee732d247d84a1e8de0ced3c78a6eca",
+      "date": "2024.01",
+      "info": "월별 급식 정보 제공 서비스",
+      "infoDetail": [
+        "∙ Front-end, 화면 설계, UI/UX",
+        "∙ 공공API를 사용해 제작",
+        "∙ 원스크롤 페이지 및 반응형으로 구현",
+        "∙ Main 영역에 음식 이모지 애니메이션 구현",
+        "∙ 날짜 선택(현재 월 default), 지역 선택과 학교 검색 후 학교 선택 시 급식 검색 결과 노출 순서로 진행"
+      ],
+      "skill": [
+        "html",
+        "css",
+        "Javascript",
+        "Typescript",
+        "Axios",
+        "Styled-Component",
+        "Redux-toolkit",
+        ".env",
+        "반응형",
+        "Figma"
+      ],
+      "mainImg": "Main-schoolMeals.png",
+      "projectImgPC": [
+        "schoolMeals-pc-01.png",
+        "schoolMeals-pc-02.png",
+        "schoolMeals-pc-03.png",
+        "schoolMeals-pc-04.png",
+        "schoolMeals-pc-05.png"
+      ],
+      "projectGif": [],
+      "projectImgMobile": [
+        "schoolMeals-m-01.png",
+        "schoolMeals-m-02.png",
+        "schoolMeals-m-03.png",
+        "schoolMeals-m-04.png",
+        "schoolMeals-m-05.png"
+      ]
+    },
+    {
+      "id": 4,
       "title": "Dark TODO",
       "items": ["Personal Project"],
       "imgUrl": "Home-darktodo.png",
@@ -116,30 +163,6 @@
         "DarkTODO-pc-05.png"
       ],
       "projectGif": ["DarkTODO-gif-01.gif"],
-      "projectImgMobile": []
-    },
-    {
-      "id": 4,
-      "title": "Scholl Meals",
-      "items": ["Personal Project"],
-      "imgUrl": "Home-nomadtodo.png",
-      "link": "https://moonozz.github.io/moono-nomadChallengeTodo/",
-      "github": "https://github.com/moonozz/moono-nomadChallengeTodo",
-      "figma": "https://www.figma.com/file/bd9dvREOUFLttMxVRVlOhA/nomad-DarkTODO?type=design&node-id=0-1&mode=design&t=bYtQe68fYZbg6jDs-0",
-      "notion": "https://www.notion.so/Perpett-cdea2b3b1bb14a6f92dfff322522ba51?pvs=4",
-      "date": "2023.09",
-      "info": "Nomad JS챌린지 과제로 제작한 투두리스트로 현재 시간과 날씨API 연동",
-      "infoDetail": [
-        "∙ Front-end, 화면 설계, UI/UX",
-        "∙ 실시간 시간 업데이트",
-        "∙ 위치를 받아와서 현재 지역과 해당 지역의 날씨 노출",
-        "∙ TODO 생성과 TODO의 상태 표시",
-        "∙ 생성 및 TODO에 대한 상태 localStorage에 저장해 새로고침해도 데이터 유지"
-      ],
-      "skill": ["html", "css", "Javascript", "반응형", "Figma"],
-      "mainImg": "Main-nomadtodo.png",
-      "projectImgPC": [],
-      "projectGif": [],
       "projectImgMobile": []
     },
     {
