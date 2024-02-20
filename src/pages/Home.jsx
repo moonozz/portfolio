@@ -29,10 +29,11 @@ function Home({ theme }) {
     'html',
     'css',
     'Javascript',
-    'React',
     'Typescript',
+    'React',
     'tailwindCSS',
-    'Redux',
+    'Redux-toolkit',
+    'Zustand',
     'figma',
   ];
 
