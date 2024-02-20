@@ -62,6 +62,7 @@ function ProductPage() {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
+                className={project.github !== '' ? '' : 'hidden'}
               >
                 <BtnGithub />
               </a>
@@ -102,7 +103,7 @@ function ProductPage() {
               );
             })}
           </div>
-          <div className="img-gif">
+          {/* <div className="img-gif">
             {project.projectGif.map(el => {
               return (
                 <img
@@ -112,7 +113,7 @@ function ProductPage() {
                 />
               );
             })}
-          </div>
+          </div> */}
           <div className="m-img">
             {project.projectImgMobile.map(el => {
               return (
