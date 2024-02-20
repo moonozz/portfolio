@@ -37,7 +37,7 @@
         "Perpett-pc-05.png",
         "Perpett-pc-06.png"
       ],
-      "projectGif": ["Perpett-gif-01.gif"],
+      "projectGif": [],
       "projectImgMobile": [
         "Perpett-m-00.png",
         "Perpett-m-01.png",
@@ -222,7 +222,7 @@
         "DarkTODO-pc-04.png",
         "DarkTODO-pc-05.png"
       ],
-      "projectGif": ["DarkTODO-gif-01.gif"],
+      "projectGif": [],
       "projectImgMobile": []
     },
     {
@@ -254,7 +254,7 @@
         "NomadTODO-pc-06.png",
         "NomadTODO-pc-07.png"
       ],
-      "projectGif": ["NomadTODO-gif-01.gif"],
+      "projectGif": [],
       "projectImgMobile": []
     }
   ],
