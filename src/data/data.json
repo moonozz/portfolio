@@ -329,7 +329,7 @@
       "link": "",
       "github": "",
       "figma": "https://www.figma.com/file/6AmZZENYEVIaJfILwav13q/dokrip-portfolio?type=design&mode=design&t=OQ1FlGXEi9KMJGvn-0",
-      "notion": "https://www.notion.so/UX-fe9fb44847ec4698b0b6ad1eb7eb3a5b?p=9ef08ee1f85a4da8a2adbd7f2236a879&pm=c",
+      "notion": "https://www.notion.so/9ef08ee1f85a4da8a2adbd7f2236a879",
       "date": "2016.03 - 2017.09",
       "info": "제휴된 운동 업체 어디에서든 이용할 수 있는 O2O 서비스",
       "infoDetail": [
@@ -339,7 +339,7 @@
       ],
       "skill": ["Photoshop", "Illustrator"],
       "mainImg": "Main-dokrip.png",
-      "projectImgPC": [],
+      "projectImgPC": ["dokrip-pc-01.png", "dokrip-pc-02.png"],
       "projectGif": [],
       "projectImgMobile": []
     }
