@@ -267,7 +267,7 @@
       "link": "",
       "github": "",
       "figma": "https://www.figma.com/file/2PG77CYIHZFITquNXzetsj/geeks-portfolio?type=design&node-id=0-1&mode=design&t=ycvQMkDMdFv3tMXF-0",
-      "notion": "https://www.notion.so/UX-fe9fb44847ec4698b0b6ad1eb7eb3a5b?p=aae64e2a20bc47ba916778a0bf68ce22&pm=c",
+      "notion": "https://www.notion.so/Geeks-aae64e2a20bc47ba916778a0bf68ce22",
       "date": "2019.01 - 2021.04",
       "info": "사내 첫 UI/UX 담당자로 POS, 파트너사이트, 주문용 웹(dadama), 포스 연동 앱, 사내 홈페이지 등 UI/UX 및 가이드 작업을 진행하였고 전체 브랜드 아이덴티티와 가이드를 잡아 생산성을 높였습니다.",
       "infoDetail": [
@@ -302,7 +302,7 @@
       "link": "",
       "github": "",
       "figma": "https://www.figma.com/file/A3a99H6LO1p6hBd43fncBx/Yellee-portfolio?type=design&node-id=0-1&mode=design&t=OQ1FlGXEi9KMJGvn-0",
-      "notion": "https://www.notion.so/UX-fe9fb44847ec4698b0b6ad1eb7eb3a5b?p=90634ca5f0aa47398bf2b695341cfeb1&pm=c",
+      "notion": "https://www.notion.so/Yellee-90634ca5f0aa47398bf2b695341cfeb1",
       "date": "2018.09 - 12",
       "info": "온라인 패션 커머스 서비스의 전체 기획, UI/UX 및 QA진행",
       "infoDetail": [
@@ -312,7 +312,12 @@
       ],
       "skill": ["Sketch", "Zeplin"],
       "mainImg": "Main-yellee.png",
-      "projectImgPC": [],
+      "projectImgPC": [
+        "yellee-pc-01.png",
+        "yellee-pc-02.png",
+        "yellee-pc-03.png",
+        "yellee-pc-04.png"
+      ],
       "projectGif": [],
       "projectImgMobile": []
     },
