@@ -8,7 +8,7 @@
       "link": "http://testqjzlt.s3-website.ap-northeast-2.amazonaws.com/",
       "github": "https://github.com/codestates-seb/seb43_main_030",
       "figma": "https://www.figma.com/file/PFOgIanoWAdQqqgtEtRWUM/%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC-%EC%9C%A0%EC%B9%98%EC%9B%90-%EA%B8%B0%ED%9A%8D-%EB%B0%8F-%EB%94%94%EC%9E%90%EC%9D%B8?type=design&node-id=726-7469&mode=design&t=lPhmq71RjNvxv4Lm-0",
-      "notion": "https://www.notion.so/Perpett-cdea2b3b1bb14a6f92dfff322522ba51?pvs=4",
+      "notion": "https://www.notion.so/Perpett-be2ff9e7275442fdb418cd197154633b",
       "date": "2023.05",
       "info": "서울에 반려견 유치원 정보를 모아 보여주고, 각 유치원 커뮤니티를 이용할 수 있는 플랫폼",
       "infoDetail": [
@@ -16,6 +16,61 @@
         "∙ 로그인, 회원가입, 인증메일 전송, Oauth(Google, Kakao)",
         "∙ 유치원 상세페이지",
         "∙ 마이페이지(프로필 CRUD, 프로필 변경추가삭제)"
+      ],
+      "projectDetail": [
+        {
+          "tag": "개발",
+          "title": "Tailwind CSS로 협업 시 반복되는 코드와 수정을 보다 쉽게 해결",
+          "detail": [
+            "⇒ 자주 사용하는 스타일을 class 로 지정해두어 협업 시 중복되는 스타일을 방지"
+          ]
+        },
+        {
+          "tag": "개발",
+          "title": "공통 컴포넌트 제작(Footer, Pagination, Modal)",
+          "detail": []
+        },
+        {
+          "tag": "개발",
+          "title": "로그인, 회원가입 유효성 검사 및 메일 인증 작업 페이지 작업 및 Oauth",
+          "detail": [
+            "⇒ 넘길 데이터를 객체 상태로 정의하고, 메일 인증용∙오류메시지용∙유효성검사용 등의 state 정의 후 정규식으로 확인",
+            "⇒ onSignup 함수나 email을 체크하는 함수 등 을 useCallback(특정 함수를 새로 만들지 않고 재사용하고 싶을때 사용)으로 감싸서 재사용 할 수 있게 만들기"
+          ]
+        },
+        {
+          "tag": "개발",
+          "title": "구글, 카카오 Oauth 작업, OauthRole 선택 페이지 작업",
+          "detail": [
+            "⇒ Oauth의 구현 방식 이해",
+            "⇒ 서버와의 통신이 완료되기 전에 새페이지로 이동해 인증 처리가 안될 수 있는 부분을 async로 비동기적으로 동작해서 함수가 완전이 끝난 후 다음 동작 넘어가게 처리",
+            "⇒ new URL() 과 searchParams.get() 으로 원하는 쿼리파라미터 값 추출",
+            "⇒ Oauth로 회원가입 하는 경우 계정 생성을 어떤걸로 할지 선택 화면 추가 작업",
+            "⇒ Oauth 회원가입 중 구글은 이메일을 넘겨주는데 카카오는 넘겨주지 않아서 입력하는 창 필요하며, 구글의 경우는 입력하지 못하게 처리"
+          ]
+        },
+        {
+          "tag": "개발",
+          "title": "유치원 상세페이지",
+          "detail": ["⇒ axios.all() 사용(3개의 api 요청)"]
+        },
+        {
+          "tag": "개발",
+          "title": "마이페이지, 프로필 추가 모달, 회원정보 수정 모달",
+          "detail": ["⇒ formData 로 PATCH 데이터 전송"]
+        },
+        {
+          "tag": "개발",
+          "title": "프로필 CRUD",
+          "detail": []
+        },
+        {
+          "tag": "UX/UI",
+          "title": "기획 리드 및 디자인 관련 컴포넌트 & 전체 디자인 작업",
+          "detail": [
+            "⇒ 전체 규칙 및 컴포넌트들과 반응형 디자인을 미리 작업해 개발 진행 속도가 빨라짐"
+          ]
+        }
       ],
       "skill": [
         "html",

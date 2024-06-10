@@ -21,6 +21,7 @@ const initialState = {
     date: '',
     info: '',
     infoDetail: [],
+    projectDetail: [],
     skill: [],
     mainImg: '',
     projectImgPC: [],

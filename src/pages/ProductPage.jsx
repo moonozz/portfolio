@@ -79,7 +79,7 @@ function ProductPage() {
             </div>
           </ProjectTitleGroup>
           <ProjectInfoDetail>
-            <ProjectDate>{project.date}</ProjectDate>
+            <ProjectTitle>{project.date}</ProjectTitle>
             <p>{project.info}</p>
             <ul>
               {project.infoDetail.map(el => {
@@ -89,6 +89,24 @@ function ProductPage() {
             <div className="tag-group">
               <Tag key={project.skill.indexOf} items={project.skill} />
             </div>
+            <ProjectEx>
+              <ProjectTitle>경험 및 문제 해결</ProjectTitle>
+              {project.projectDetail.map(el => {
+                return (
+                  <ul>
+                    <li>
+                      <span>{el.tag}</span>
+                    </li>
+                    <li>
+                      <p>{el.title}</p>
+                      {el.detail.map(i => {
+                        return <p>{i}</p>;
+                      })}
+                    </li>
+                  </ul>
+                );
+              })}
+            </ProjectEx>
           </ProjectInfoDetail>
         </ProjectInfo>
         <ProjectImg>
@@ -182,12 +200,14 @@ const ProjectInfo = styled.section`
 const ProjectTitleGroup = styled.div`
   display: grid;
   grid-template-columns: 1fr;
+  max-height: 24rem;
 `;
 
 const ProjectInfoTitle = styled.div`
   display: grid;
   grid-template-columns: 7fr 1fr;
   margin-bottom: 2.4rem;
+  max-height: 14rem;
 
   @media ${({ theme }) => theme.tablet} {
     grid-template-columns: 1fr;
@@ -219,9 +239,41 @@ const ProjectInfoDetail = styled.div`
   }
 `;
 
-const ProjectDate = styled.p`
+const ProjectTitle = styled.p`
   margin: 1rem 0 2.4rem;
   font-weight: 600;
+`;
+
+const ProjectEx = styled.div`
+  border-top: 0.1rem solid ${({ theme }) => theme.color.black};
+  margin: 4.8rem 0 2.4rem;
+  padding-top: 4.8rem;
+  font-size: 1.6rem;
+
+  span {
+    font-size: 1.2rem;
+    color: ${({ theme }) => theme.color.white};
+    padding: 0.2rem 0.5rem;
+    margin-right: 1rem;
+    border: 0.1rem solid;
+    background-color: ${({ theme }) => theme.color.black};
+    border-color: ${({ theme }) => theme.color.black};
+    border-radius: 0.8rem;
+
+    @media ${({ theme }) => theme.tablet} {
+      font-size: 1.2rem;
+    }
+  }
+  ul {
+    display: grid;
+    grid-template-columns: 6rem auto;
+    li {
+      margin-bottom: 1rem;
+      p {
+        margin-top: 0.2rem;
+      }
+    }
+  }
 `;
 
 const ProjectImg = styled.section`
@@ -244,8 +296,6 @@ const ProjectImg = styled.section`
     margin: 9rem 0;
   }
 `;
-
-const ProjectName = styled.div``;
 
 // const ProjectBtnDiv = styled.div`
 //   margin-top: 4rem;
