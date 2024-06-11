@@ -631,7 +631,17 @@
         "Illustrator"
       ],
       "mainImg": "Main-geeks.png",
-      "projectImgPC": [],
+      "projectImgPC": [
+        "geeks-pc-01.png",
+        "geeks-pc-02.png",
+        "geeks-pc-03.png",
+        "geeks-pc-04.png",
+        "geeks-pc-05.gif",
+        "geeks-pc-06.gif",
+        "geeks-pc-07.png",
+        "geeks-pc-08.png",
+        "geeks-pc-09.png"
+      ],
       "projectGif": [],
       "projectImgMobile": []
     },
