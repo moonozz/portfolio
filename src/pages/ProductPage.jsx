@@ -266,7 +266,7 @@ const ProjectEx = styled.div`
   }
   ul {
     display: grid;
-    grid-template-columns: 6rem auto;
+    grid-template-columns: 8rem auto;
     li {
       margin-bottom: 1rem;
       p {
